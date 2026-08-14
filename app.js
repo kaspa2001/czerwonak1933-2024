@@ -35,6 +35,42 @@ function updateSwipe(position) {
     rightPane.style.clipPath = `inset(0 0 0 ${position}%)`;
 }
 
+const swipeHandle = document.getElementById("swipe-handle");
+
+let isDragging = false;
+
+function moveSwipe(clientX) {
+    const mapRect = map.getContainer().getBoundingClientRect();
+
+    let position =
+        ((clientX - mapRect.left) / mapRect.width) * 100;
+
+    position = Math.max(0, Math.min(100, position));
+
+    updateSwipe(position);
+
+    swipeHandle.style.left = `${position}%`;
+}
+
+swipeHandle.addEventListener("mousedown", function (event) {
+    event.preventDefault();
+    isDragging = true;
+    map.dragging.disable();
+});
+
+document.addEventListener("mousemove", function (event) {
+    if (!isDragging) return;
+
+    moveSwipe(event.clientX);
+});
+
+document.addEventListener("mouseup", function () {
+    if (!isDragging) return;
+
+    isDragging = false;
+    map.dragging.enable();
+});
+
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.
  * Niższy z-index oznacza warstwę rysowaną niżej.
@@ -259,6 +295,7 @@ async function initialiseMap() {
         granica.addTo(map);
 
         updateSwipe(50);
+        swipeHandle.style.left = "50%";
 
         /*
          * Lewa strona: 1933.

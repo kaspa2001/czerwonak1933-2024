@@ -269,11 +269,11 @@ async function initialiseMap() {
          * Prawa strona: 2024.
          */
 
-        L.control
-            .sideBySide(warstwy1933, warstwy2024, {
-                padding: 44
-            })
-            .addTo(map);
+//        L.control
+//            .sideBySide(warstwy1933, warstwy2024, {
+ //               padding: 44
+ //          })
+ //           .addTo(map);
 
         if (granica.getBounds().isValid()) {
             map.fitBounds(granica.getBounds(), {

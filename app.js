@@ -31,10 +31,14 @@ let swipePosition = 50;
 function updateSwipe(position) {
     swipePosition = position;
 
-    leftPane.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
-    rightPane.style.clipPath = `inset(0 0 0 ${position}%)`;
-}
+    leftPane.style.clipPath =
+        `inset(0 ${100 - position}% 0 0)`;
 
+    rightPane.style.clipPath =
+        `inset(0 0 0 ${position}%)`;
+
+    console.log("SUWAK:", position);
+}
 const swipeHandle = document.getElementById("swipe-handle");
 
 let isDragging = false;

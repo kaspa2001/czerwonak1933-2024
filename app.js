@@ -23,16 +23,6 @@ map.getPane("rightPane").style.zIndex = 402;
 map.createPane("granicaPane");
 map.getPane("granicaPane").style.zIndex = 450;
 
-const leftPane = map.getPane("leftPane");
-const rightPane = map.getPane("rightPane");
-
-function updateSwipe(position) {
-    leftPane.style.clipPath = "";
-    rightPane.style.clipPath = "";
-}
-
-updateSwipe(50);
-
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.
  * Niższy z-index oznacza warstwę rysowaną niżej.

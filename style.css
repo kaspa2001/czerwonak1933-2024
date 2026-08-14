@@ -116,6 +116,7 @@ footer {
         z-index: 1000;
         cursor: ew-resize;
         pointer-events: auto;
+        touch-action: none;
     }
     
     .swipe-line {

@@ -52,22 +52,44 @@ function moveSwipe(clientX) {
     swipeHandle.style.left = `${position}%`;
 }
 
-swipeHandle.addEventListener("mousedown", function (event) {
+swipeHandle.addEventListener("pointerdown", function (event) {
     event.preventDefault();
+    event.stopPropagation();
+
     isDragging = true;
+
+    swipeHandle.setPointerCapture(event.pointerId);
+
     map.dragging.disable();
 });
 
-document.addEventListener("mousemove", function (event) {
+swipeHandle.addEventListener("pointermove", function (event) {
     if (!isDragging) return;
+
+    event.preventDefault();
+    event.stopPropagation();
 
     moveSwipe(event.clientX);
 });
 
-document.addEventListener("mouseup", function () {
-    if (!isDragging) return;
+swipeHandle.addEventListener("pointerup", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
 
     isDragging = false;
+
+    swipeHandle.releasePointerCapture(event.pointerId);
+
+    map.dragging.enable();
+});
+
+swipeHandle.addEventListener("pointercancel", function (event) {
+    isDragging = false;
+
+    if (swipeHandle.hasPointerCapture(event.pointerId)) {
+        swipeHandle.releasePointerCapture(event.pointerId);
+    }
+
     map.dragging.enable();
 });
 

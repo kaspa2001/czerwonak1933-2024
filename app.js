@@ -27,8 +27,8 @@ const leftPane = map.getPane("leftPane");
 const rightPane = map.getPane("rightPane");
 
 function updateSwipe(position) {
-    leftPane.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
-    rightPane.style.clipPath = `inset(0 0 0 ${position}%)`;
+    leftPane.style.clipPath = "";
+    rightPane.style.clipPath = "";
 }
 
 updateSwipe(50);

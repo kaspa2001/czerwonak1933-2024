@@ -194,43 +194,31 @@ async function initialiseMap() {
 
         ] = await Promise.all([
 
-            loadGeoJSON("data/granica.geojson", styles.granica),
+            loadGeoJSON("data/granica.geojson", styles.granica, "granicaPane"),
 
-            loadGeoJSON("data/rolne_1933.geojson", styles.rolne),
-            loadGeoJSON("data/las_1933.geojson", styles.las),
-            loadGeoJSON("data/zielone_1933.geojson", styles.zielone),
-            loadGeoJSON("data/nieuzytki_1933.geojson", styles.nieuzytki),
-            loadGeoJSON("data/jeziora_1933.geojson", styles.jeziora),
-            loadGeoJSON("data/zabudowa_1933.geojson", styles.zabudowa),
-            loadGeoJSON("data/przemysl_1933.geojson", styles.przemysl),
-            loadGeoJSON("data/cmentarze_1933.geojson", styles.cmentarze),
-            loadGeoJSON(
-                "data/drogi_lokalne_1933.geojson",
-                styles.drogiLokalne
-            ),
-            loadGeoJSON(
-                "data/drogi_glowne_1933.geojson",
-                styles.drogiGlowne
-            ),
-            loadGeoJSON("data/kolej_1933.geojson", styles.kolej),
+            loadGeoJSON("data/rolne_1933.geojson", styles.rolne, "leftPane"),
+            loadGeoJSON("data/las_1933.geojson", styles.las, "leftPane"),
+            loadGeoJSON("data/zielone_1933.geojson", styles.zielone, "leftPane"),
+            loadGeoJSON("data/nieuzytki_1933.geojson", styles.nieuzytki, "leftPane"),
+            loadGeoJSON("data/jeziora_1933.geojson", styles.jeziora, "leftPane"),
+            loadGeoJSON("data/zabudowa_1933.geojson", styles.zabudowa, "leftPane"),
+            loadGeoJSON("data/przemysl_1933.geojson", styles.przemysl, "leftPane"),
+            loadGeoJSON("data/cmentarze_1933.geojson", styles.cmentarze, "leftPane"),
+            loadGeoJSON("data/drogi_lokalne_1933.geojson", styles.drogiLokalne, "leftPane"),
+            loadGeoJSON("data/drogi_glowne_1933.geojson", styles.drogiGlowne, "leftPane"),
+            loadGeoJSON("data/kolej_1933.geojson", styles.kolej, "leftPane"),
 
-            loadGeoJSON("data/rolne_2024.geojson", styles.rolne),
-            loadGeoJSON("data/las_2024.geojson", styles.las),
-            loadGeoJSON("data/zielone_2024.geojson", styles.zielone),
-            loadGeoJSON("data/nieuzytki_2024.geojson", styles.nieuzytki),
-            loadGeoJSON("data/jeziora_2024.geojson", styles.jeziora),
-            loadGeoJSON("data/zabudowa_2024.geojson", styles.zabudowa),
-            loadGeoJSON("data/przemysl_2024.geojson", styles.przemysl),
-            loadGeoJSON("data/cmentarze_2024.geojson", styles.cmentarze),
-            loadGeoJSON(
-                "data/drogi_lokalne_2024.geojson",
-                styles.drogiLokalne
-            ),
-            loadGeoJSON(
-                "data/drogi_glowne_2024.geojson",
-                styles.drogiGlowne
-            ),
-            loadGeoJSON("data/kolej_2024.geojson", styles.kolej)
+            loadGeoJSON("data/rolne_2024.geojson", styles.rolne, "rightPane"),
+            loadGeoJSON("data/las_2024.geojson", styles.las, "rightPane"),
+            loadGeoJSON("data/zielone_2024.geojson", styles.zielone, "rightPane"),
+            loadGeoJSON("data/nieuzytki_2024.geojson", styles.nieuzytki, "rightPane"),
+            loadGeoJSON("data/jeziora_2024.geojson", styles.jeziora, "rightPane"),
+            loadGeoJSON("data/zabudowa_2024.geojson", styles.zabudowa, "rightPane"),
+            loadGeoJSON("data/przemysl_2024.geojson", styles.przemysl, "rightPane"),
+            loadGeoJSON("data/cmentarze_2024.geojson", styles.cmentarze, "rightPane"),
+            loadGeoJSON("data/drogi_lokalne_2024.geojson", styles.drogiLokalne, "rightPane"),
+            loadGeoJSON("data/drogi_glowne_2024.geojson", styles.drogiGlowne, "rightPane"),
+            loadGeoJSON("data/kolej_2024.geojson", styles.kolej, "rightPane")
         ]);
 
         /*

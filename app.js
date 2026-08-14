@@ -23,25 +23,31 @@ map.getPane("rightPane").style.zIndex = 402;
 map.createPane("granicaPane");
 map.getPane("granicaPane").style.zIndex = 450;
 
+const leftPane = map.getPane("leftPane");
+const rightPane = map.getPane("rightPane");
+
+let swipePosition = 50;
+
+function updateSwipe(position) {
+    swipePosition = position;
+
+    leftPane.style.clipPath = `inset(0 ${100 - position}% 0 0)`;
+    rightPane.style.clipPath = `inset(0 0 0 ${position}%)`;
+}
+
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.
  * Niższy z-index oznacza warstwę rysowaną niżej.
  */
 
-map.createPane("terenyPane");
-map.getPane("terenyPane").style.zIndex = 410;
+map.createPane("leftPane");
+map.getPane("leftPane").style.zIndex = 401;
 
-map.createPane("wodyPane");
-map.getPane("wodyPane").style.zIndex = 420;
-
-map.createPane("zabudowaPane");
-map.getPane("zabudowaPane").style.zIndex = 430;
-
-map.createPane("transportPane");
-map.getPane("transportPane").style.zIndex = 440;
+map.createPane("rightPane");
+map.getPane("rightPane").style.zIndex = 402;
 
 map.createPane("granicaPane");
-map.getPane("granicaPane").style.zIndex = 460;
+map.getPane("granicaPane").style.zIndex = 450;
 
 /*
  * Symbolizacja klas.
@@ -54,7 +60,6 @@ const styles = {
         weight: 0.8,
         fillColor: "#f4dc72",
         fillOpacity: 0.72,
-        pane: "terenyPane"
     },
 
     las: {
@@ -62,7 +67,6 @@ const styles = {
         weight: 0.8,
         fillColor: "#69a85f",
         fillOpacity: 0.78,
-        pane: "terenyPane"
     },
 
     zielone: {
@@ -70,7 +74,6 @@ const styles = {
         weight: 0.8,
         fillColor: "#a8cf7a",
         fillOpacity: 0.72,
-        pane: "terenyPane"
     },
 
     nieuzytki: {
@@ -78,7 +81,6 @@ const styles = {
         weight: 0.8,
         fillColor: "#c8bca8",
         fillOpacity: 0.72,
-        pane: "terenyPane"
     },
 
     jeziora: {
@@ -86,7 +88,6 @@ const styles = {
         weight: 1,
         fillColor: "#73b7df",
         fillOpacity: 0.82,
-        pane: "wodyPane"
     },
 
     zabudowa: {
@@ -94,7 +95,6 @@ const styles = {
         weight: 0.8,
         fillColor: "#d64b45",
         fillOpacity: 0.84,
-        pane: "zabudowaPane"
     },
 
     przemysl: {
@@ -102,7 +102,6 @@ const styles = {
         weight: 1,
         fillColor: "#9770a8",
         fillOpacity: 0.84,
-        pane: "zabudowaPane"
     },
 
     cmentarze: {
@@ -110,21 +109,18 @@ const styles = {
         weight: 1,
         fillColor: "#739b77",
         fillOpacity: 0.82,
-        pane: "zabudowaPane"
     },
 
     drogiLokalne: {
         color: "#f4f1e8",
         weight: 1.4,
         opacity: 1,
-        pane: "transportPane"
     },
 
     drogiGlowne: {
         color: "#e99637",
         weight: 2.6,
         opacity: 1,
-        pane: "transportPane"
     },
 
     kolej: {
@@ -132,7 +128,6 @@ const styles = {
         weight: 2,
         opacity: 1,
         dashArray: "5 4",
-        pane: "transportPane"
     },
 
     granica: {
@@ -140,7 +135,6 @@ const styles = {
         weight: 3,
         opacity: 1,
         fillOpacity: 0,
-        pane: "granicaPane"
     }
 };
 
@@ -263,6 +257,8 @@ async function initialiseMap() {
          */
 
         granica.addTo(map);
+
+        updateSwipe(50);
 
         /*
          * Lewa strona: 1933.

@@ -14,6 +14,15 @@ const osm = L.tileLayer(
     }
 ).addTo(map);
 
+map.createPane("leftPane");
+map.getPane("leftPane").style.zIndex = 400;
+
+map.createPane("rightPane");
+map.getPane("rightPane").style.zIndex = 400;
+
+map.createPane("granicaPane");
+map.getPane("granicaPane").style.zIndex = 450;
+
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.
  * Niższy z-index oznacza warstwę rysowaną niżej.
@@ -135,7 +144,7 @@ const styles = {
     }
 };
 
-async function loadGeoJSON(path, style) {
+async function loadGeoJSON(path, style, pane) {
     const response = await fetch(path);
 
     if (!response.ok) {
@@ -147,8 +156,10 @@ async function loadGeoJSON(path, style) {
     const data = await response.json();
 
     return L.geoJSON(data, {
-        style: style,
-        pane: style.pane
+        style: {
+            ...style,
+            pane: pane
+        }
     });
 }
 

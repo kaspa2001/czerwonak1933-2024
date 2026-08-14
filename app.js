@@ -48,50 +48,66 @@ function moveSwipe(clientX) {
     position = Math.max(0, Math.min(100, position));
 
     updateSwipe(position);
-
     swipeHandle.style.left = `${position}%`;
 }
 
-swipeHandle.addEventListener("pointerdown", function (event) {
+function startSwipe(event) {
+    const mapRect = map.getContainer().getBoundingClientRect();
+
+    const currentX =
+        mapRect.left + (swipePosition / 100) * mapRect.width;
+
+    /*
+     * Przeciąganie rozpoczynamy tylko wtedy,
+     * gdy kliknięcie jest blisko aktualnej pozycji suwaka.
+     */
+    if (Math.abs(event.clientX - currentX) > 35) {
+        return;
+    }
+
     event.preventDefault();
     event.stopPropagation();
 
     isDragging = true;
 
-    swipeHandle.setPointerCapture(event.pointerId);
-
     map.dragging.disable();
-});
-
-swipeHandle.addEventListener("pointermove", function (event) {
-    if (!isDragging) return;
-
-    event.preventDefault();
-    event.stopPropagation();
 
     moveSwipe(event.clientX);
-});
+}
 
-swipeHandle.addEventListener("pointerup", function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-
-    isDragging = false;
-
-    swipeHandle.releasePointerCapture(event.pointerId);
-
-    map.dragging.enable();
-});
-
-swipeHandle.addEventListener("pointercancel", function (event) {
-    isDragging = false;
-
-    if (swipeHandle.hasPointerCapture(event.pointerId)) {
-        swipeHandle.releasePointerCapture(event.pointerId);
+function dragSwipe(event) {
+    if (!isDragging) {
+        return;
     }
 
+    event.preventDefault();
+
+    moveSwipe(event.clientX);
+}
+
+function stopSwipe() {
+    if (!isDragging) {
+        return;
+    }
+
+    isDragging = false;
     map.dragging.enable();
-});
+}
+
+map.getContainer().addEventListener(
+    "mousedown",
+    startSwipe
+);
+
+document.addEventListener(
+    "mousemove",
+    dragSwipe
+);
+
+document.addEventListener(
+    "mouseup",
+    stopSwipe
+);
 
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.

@@ -15,10 +15,10 @@ const osm = L.tileLayer(
 ).addTo(map);
 
 map.createPane("leftPane");
-map.getPane("leftPane").style.zIndex = 400;
+map.getPane("leftPane").style.zIndex = 401;
 
 map.createPane("rightPane");
-map.getPane("rightPane").style.zIndex = 400;
+map.getPane("rightPane").style.zIndex = 402;
 
 map.createPane("granicaPane");
 map.getPane("granicaPane").style.zIndex = 450;

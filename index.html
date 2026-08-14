@@ -2,7 +2,11 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Jak zmieniła się gmina Czerwonak?</title>
 
@@ -11,12 +15,24 @@
         content="Interaktywne porównanie zmian użytkowania terenu w gminie Czerwonak w latach 1933–2024."
     >
 
+    <!-- Arkusz stylów biblioteki Leaflet -->
     <link
         rel="stylesheet"
-        href="https://unpkg.com/leaflet@1.9t" href="style.css">
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <!-- Nasz arkusz stylów -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
 
-<body zmieniła się gmina Czerwonak?</h1>
+<body>
+
+    <header>
+        <h1>Jak zmieniła się gmina Czerwonak?</h1>
 
         <p>
             Interaktywne porównanie zmian użytkowania terenu
@@ -28,11 +44,14 @@
         <section class="map-section">
 
             <div class="map-heading">
-                <h2>Mapa interaktywna</h2>
+                <div>
+                    <h2>Mapa interaktywna</h2>
 
-                <p>
-                    Przybliż mapę i wybierz warstwy w prawym górnym rogu.
-                </p>
+                    <p>
+                        Przybliż mapę i wybierz warstwy
+                        w prawym górnym rogu.
+                    </p>
+                </div>
             </div>
 
             <div id="map">
@@ -45,13 +64,19 @@
     </main>
 
     <footer>
-        <strong>mgr inż. Marcin Kamieniczny</strong><br>
+        <strong>mgr inż. Marcin Kamieniczny</strong>
+        <br>
         Uniwersytet im. Adama Mickiewicza w Poznaniu
     </footer>
 
+    <!-- Biblioteka Leaflet -->
     <script
-        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-sscript>
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+    ></script>
+
+    <!-- Nasz kod mapy -->
+    app.jsscript>
 
 </body>
 </html>

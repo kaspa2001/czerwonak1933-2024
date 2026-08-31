@@ -5,6 +5,12 @@ const map = L.map("map", {
     minZoom: 12
 });
 
+L.control.scale({
+    imperial: false,
+    metric: true,
+    position: "bottomleft"
+}).addTo(map);
+
 const osm = L.tileLayer(
     "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
     {

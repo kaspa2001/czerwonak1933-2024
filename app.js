@@ -31,14 +31,67 @@ let swipePosition = 50;
 function updateSwipe(position) {
     swipePosition = position;
 
-    leftPane.style.clipPath =
-        `inset(0 ${100 - position}% 0 0)`;
+    const mapSize = map.getSize();
+    const dividerX = mapSize.x * (position / 100);
 
-    rightPane.style.clipPath =
-        `inset(0 0 0 ${position}%)`;
+    /*
+     * Panele Leafleta są przesuwane transformacją podczas
+     * panoramowania i powiększania. Dlatego pozycję suwaka
+     * przeliczamy ze współrzędnych kontenera mapy
+     * na współrzędne warstw Leafleta.
+     */
+
+    const topLeft = map.containerPointToLayerPoint([0, 0]);
+
+    const dividerTop = map.containerPointToLayerPoint([
+        dividerX,
+        0
+    ]);
+
+    const bottomRight = map.containerPointToLayerPoint([
+        mapSize.x,
+        mapSize.y
+    ]);
+
+    /*
+     * Rok 1933: widoczny od lewej krawędzi do suwaka.
+     */
+
+    leftPane.style.clip =
+        `rect(` +
+        `${topLeft.y}px, ` +
+        `${dividerTop.x}px, ` +
+        `${bottomRight.y}px, ` +
+        `${topLeft.x}px` +
+        `)`;
+
+    /*
+     * Rok 2024: widoczny od suwaka do prawej krawędzi.
+     */
+
+    rightPane.style.clip =
+        `rect(` +
+        `${topLeft.y}px, ` +
+        `${bottomRight.x}px, ` +
+        `${bottomRight.y}px, ` +
+        `${dividerTop.x}px` +
+        `)`;
+
+    /*
+     * Usuwamy poprzednią metodę przycinania,
+     * żeby clipPath nie ukrywał warstw.
+     */
+
+    leftPane.style.clipPath = "";
+    rightPane.style.clipPath = "";
 
     console.log("SUWAK:", position);
 }
+
+map.on("move zoom resize viewreset", function () {
+    updateSwipe(swipePosition);
+});
+
 const swipeHandle = document.getElementById("swipe-handle");
 
 let isDragging = false;

@@ -43,11 +43,99 @@
             </div>
 
             <div id="map">
-                <div id="swipe-handle">
-                    <div class="swipe-line"></div>
-                    <div class="swipe-button">↔</div>
-                </div>
+    <div id="swipe-handle">
+        <div class="swipe-line"></div>
+        <div class="swipe-button">↔</div>
+    </div>
+
+    <div id="layer-control">
+        <button id="layer-toggle" type="button">
+            ☰ Warstwy
+        </button>
+
+        <div id="layer-panel">
+
+            <div class="layer-section-title">
+                Podkład
             </div>
+
+            <label>
+                <input type="checkbox" id="osm-toggle" checked>
+                OpenStreetMap
+            </label>
+
+            <div class="layer-section-title">
+                Użytkowanie terenu
+            </div>
+
+            <label>
+                <input type="checkbox" data-layer="rolne" checked>
+                Tereny rolne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="las" checked>
+                Lasy
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="zielone" checked>
+                Tereny zielone
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="nieuzytki" checked>
+                Nieużytki
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="jeziora" checked>
+                Jeziora
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="zabudowa" checked>
+                Zabudowa
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="przemysl" checked>
+                Przemysł
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="cmentarze" checked>
+                Cmentarze
+            </label>
+
+            <div class="layer-section-title">
+                Infrastruktura
+            </div>
+
+            <label>
+                <input type="checkbox" data-layer="drogiLokalne" checked>
+                Drogi lokalne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="drogiGlowne" checked>
+                Drogi główne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="kolej" checked>
+                Kolej
+            </label>
+
+            <label>
+                <input type="checkbox" id="granica-toggle" checked>
+                Granica gminy
+            </label>
+
+            </div>
+        </div>
+    </div>
+            
         </section>
     </main>
 

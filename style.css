@@ -119,6 +119,7 @@ footer {
         cursor: ew-resize;
         pointer-events: auto;
         touch-action: none;
+        user-select: none;
     }
     
     .swipe-line {

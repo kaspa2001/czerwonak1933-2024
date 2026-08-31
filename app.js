@@ -56,25 +56,14 @@ function moveSwipe(clientX) {
 }
 
 function startSwipe(event) {
-    const mapRect = map.getContainer().getBoundingClientRect();
-
-    const currentX =
-        mapRect.left + (swipePosition / 100) * mapRect.width;
-
-    /*
-     * Przeciąganie rozpoczynamy tylko wtedy,
-     * gdy kliknięcie jest blisko aktualnej pozycji suwaka.
-     */
-    if (Math.abs(event.clientX - currentX) > 35) {
-        return;
-    }
-
     event.preventDefault();
     event.stopPropagation();
 
     isDragging = true;
 
     map.dragging.disable();
+
+    swipeHandle.setPointerCapture(event.pointerId);
 
     moveSwipe(event.clientX);
 }
@@ -89,44 +78,29 @@ function dragSwipe(event) {
     moveSwipe(event.clientX);
 }
 
-function stopSwipe() {
+function stopSwipe(event) {
     if (!isDragging) {
         return;
     }
 
     isDragging = false;
+
+    if (swipeHandle.hasPointerCapture(event.pointerId)) {
+        swipeHandle.releasePointerCapture(event.pointerId);
+    }
+
     map.dragging.enable();
 }
 
-map.getContainer().addEventListener(
-    "mousedown",
-    startSwipe
-);
-
-document.addEventListener(
-    "mousemove",
-    dragSwipe
-);
-
-document.addEventListener(
-    "mouseup",
-    stopSwipe
-);
+swipeHandle.addEventListener("pointerdown", startSwipe);
+swipeHandle.addEventListener("pointermove", dragSwipe);
+swipeHandle.addEventListener("pointerup", stopSwipe);
+swipeHandle.addEventListener("pointercancel", stopSwipe);
 
 /*
  * Osobne panele rysowania zapewniają prawidłową kolejność warstw.
  * Niższy z-index oznacza warstwę rysowaną niżej.
  */
-
-map.createPane("leftPane");
-map.getPane("leftPane").style.zIndex = 401;
-
-map.createPane("rightPane");
-map.getPane("rightPane").style.zIndex = 402;
-
-map.createPane("granicaPane");
-map.getPane("granicaPane").style.zIndex = 450;
-
 /*
  * Symbolizacja klas.
  * Ta sama klasa ma identyczny kolor w 1933 i 2024 roku.

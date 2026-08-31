@@ -3,13 +3,15 @@ console.log("NOWA WERSJA APP.JS — CZERWONAK 1933–2024");
 const map = L.map("map", {
     zoomControl: true,
     minZoom: 10,
-    max Zoom: 19
+    maxZoom: 19
 });
 
 const osm = L.tileLayer(
     "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
     {
         maxZoom: 19,
+        minZoom: 10,
+        
         attribution:
             '&copy; <a href="https://www.openstreetmap.org/copyright">' +
             "OpenStreetMap</a>"

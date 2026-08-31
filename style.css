@@ -274,10 +274,10 @@ header p {
 }
 
 .leaflet-control-scale-line {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
 
-    border: 2px solid #24322a;
-    border-top: none;
+    border: 1px solid #24322a;
+    border-top: 3px solid #24322a;
 
     color: #24322a;
 
@@ -286,9 +286,9 @@ header p {
 
     line-height: 1.2;
 
-    padding: 2px 5px 1px;
+    padding: 2px 6px;
 
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================

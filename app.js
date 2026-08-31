@@ -398,23 +398,6 @@ async function initialiseMap() {
             layerPanel.classList.toggle("open");
         });
         
-       // =========================
-       // KONTROLA WARSTW
-       // =========================
-
-        const layerToggle = document.getElementById("layer-toggle");
-        const layerPanel = document.getElementById("layer-panel");
-        
-        layerToggle.addEventListener("click", function () {
-            layerPanel.classList.toggle("open");
-        });
-        
-        /*
-         * Checkboxy klas użytkowania.
-         * Każdy checkbox steruje jednocześnie
-         * warstwą 1933 i warstwą 2024.
-         */
-        
         document
             .querySelectorAll("#layer-panel input[data-layer]")
             .forEach(function (checkbox) {

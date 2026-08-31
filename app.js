@@ -361,6 +361,20 @@ async function initialiseMap() {
             kolej2024
         ];
 
+        const layerPairs = {
+            rolne: [rolne1933, rolne2024],
+            las: [las1933, las2024],
+            zielone: [zielone1933, zielone2024],
+            nieuzytki: [nieuzytki1933, nieuzytki2024],
+            jeziora: [jeziora1933, jeziora2024],
+            zabudowa: [zabudowa1933, zabudowa2024],
+            przemysl: [przemysl1933, przemysl2024],
+            cmentarze: [cmentarze1933, cmentarze2024],
+            drogiLokalne: [drogiLokalne1933, drogiLokalne2024],
+            drogiGlowne: [drogiGlowne1933, drogiGlowne2024],
+            kolej: [kolej1933, kolej2024]
+        };
+
         warstwy1933.forEach(layer => layer.addTo(map));
         warstwy2024.forEach(layer => layer.addTo(map));
 
@@ -370,6 +384,89 @@ async function initialiseMap() {
 
         granica.addTo(map);
 
+        /* =========================
+   KONTROLA WARSTW
+   ========================= */
+
+        const layerToggle = document.getElementById("layer-toggle");
+        const layerPanel = document.getElementById("layer-panel");
+        
+        layerToggle.addEventListener("click", function () {
+            layerPanel.classList.toggle("open");
+        });
+        
+        /*
+         * Checkboxy klas użytkowania.
+         * Każdy checkbox steruje jednocześnie
+         * warstwą 1933 i warstwą 2024.
+         */
+        
+        document
+            .querySelectorAll("#layer-panel input[data-layer]")
+            .forEach(function (checkbox) {
+        
+                checkbox.addEventListener("change", function () {
+        
+                    const layers = layerPairs[this.dataset.layer];
+        
+                    if (!layers) {
+                        return;
+                    }
+        
+                    layers.forEach(function (layer) {
+        
+                        if (this.checked) {
+                            if (!map.hasLayer(layer)) {
+                                layer.addTo(map);
+                            }
+                        } else {
+                            if (map.hasLayer(layer)) {
+                                map.removeLayer(layer);
+                            }
+                        }
+        
+                    }, this);
+                });
+            });
+        
+        /*
+         * OpenStreetMap
+         */
+        
+        const osmToggle = document.getElementById("osm-toggle");
+        
+        osmToggle.addEventListener("change", function () {
+        
+            if (this.checked) {
+                if (!map.hasLayer(osm)) {
+                    osm.addTo(map);
+                }
+            } else {
+                if (map.hasLayer(osm)) {
+                    map.removeLayer(osm);
+                }
+            }
+        });
+        
+        /*
+         * Granica gminy
+         */
+        
+        const granicaToggle = document.getElementById("granica-toggle");
+        
+        granicaToggle.addEventListener("change", function () {
+        
+            if (this.checked) {
+                if (!map.hasLayer(granica)) {
+                    granica.addTo(map);
+                }
+            } else {
+                if (map.hasLayer(granica)) {
+                    map.removeLayer(granica);
+                }
+            }
+        });
+        
         updateSwipe(50);
         swipeHandle.style.left = "50%";
 

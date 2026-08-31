@@ -85,7 +85,6 @@ header p {
 
     top: 0;
     bottom: 0;
-
     left: 50%;
 
     width: 40px;
@@ -144,74 +143,28 @@ header p {
 }
 
 /* =========================
-   KOMUNIKAT BŁĘDU
-   ========================= */
-
-.map-status {
-    padding: 16px;
-    font-weight: bold;
-    color: #365341;
-}
-
-/* =========================
-   STOPKA
-   ========================= */
-
-footer {
-    padding: 24px 20px;
-    text-align: center;
-    background: #234b34;
-    color: #ffffff;
-}
-
-/* =========================
-   TELEFONY
-   ========================= */
-
-@media (max-width: 700px) {
-
-    header {
-        padding: 22px 16px;
-    }
-
-    .map-section {
-        padding: 0 10px 24px;
-    }
-
-    .map-heading {
-        display: block;
-    }
-
-    .map-heading p {
-        margin-top: 6px;
-    }
-
-    #map {
-        height: 68vh;
-        min-height: 430px;
-        border-radius: 8px;
-    }
-
-    .leaflet-control-layers {
-        font-size: 14px;
-    }
-}
-
-/* =========================
-   KONTROLA WARSTW
+   PANEL WARSTW
    ========================= */
 
 #layer-control {
     position: absolute;
+
     top: 10px;
     right: 10px;
+
     z-index: 1100;
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
 #layer-toggle {
+    position: relative;
+
+    z-index: 1101;
+
     border: 1px solid #cfd7d1;
     border-radius: 6px;
+
     background: white;
     color: #24322a;
 
@@ -293,29 +246,6 @@ footer {
 }
 
 /* =========================
-   OZNACZENIA LAT
-   ========================= */
-
-.year-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-
-    padding: 0 12px 6px;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    color: #365341;
-}
-
-.year-header span {
-    display: block;
-}
-
-/* =========================
    PODZIAŁKA
    ========================= */
 
@@ -340,4 +270,61 @@ footer {
     padding: 2px 5px 1px;
 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   STATUS
+   ========================= */
+
+.map-status {
+    padding: 16px;
+    font-weight: bold;
+    color: #365341;
+}
+
+/* =========================
+   STOPKA
+   ========================= */
+
+footer {
+    padding: 24px 20px;
+
+    text-align: center;
+
+    background: #234b34;
+    color: #ffffff;
+}
+
+/* =========================
+   TELEFONY
+   ========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 22px 16px;
+    }
+
+    .map-section {
+        padding: 0 10px 24px;
+    }
+
+    .map-heading {
+        display: block;
+    }
+
+    .map-heading p {
+        margin-top: 6px;
+    }
+
+    #map {
+        height: 68vh;
+        min-height: 430px;
+        border-radius: 8px;
+    }
+
+    #layer-panel {
+        width: 210px;
+        max-height: 60vh;
+    }
 }

@@ -93,7 +93,7 @@ map.on("move zoom resize viewreset", function () {
 });
 
 const swipeHandle = document.getElementById("swipe-handle");
-
+map.getContainer().appendChild(swipeHandle);
 let isDragging = false;
 
 function moveSwipe(clientX) {

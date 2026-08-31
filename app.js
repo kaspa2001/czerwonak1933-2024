@@ -2,7 +2,7 @@ console.log("NOWA WERSJA APP.JS — CZERWONAK 1933–2024");
 
 const map = L.map("map", {
     zoomControl: true,
-    minZoom: 10
+    minZoom: 12
 });
 
 const osm = L.tileLayer(

@@ -202,10 +202,8 @@ async function loadGeoJSON(path, style, pane) {
     const data = await response.json();
 
     return L.geoJSON(data, {
-        style: {
-            ...style,
-            pane: pane
-        }
+        pane: pane,
+        style: style
     });
 }
 

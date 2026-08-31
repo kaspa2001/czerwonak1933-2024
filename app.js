@@ -256,8 +256,10 @@ async function loadGeoJSON(path, style, pane) {
 
     return L.geoJSON(data, {
         pane: pane,
-        style: style
-    });
+        
+        style: {style,
+                pane: pane
+               }});
 }
 
 async function initialiseMap() {

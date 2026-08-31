@@ -93,7 +93,7 @@ map.on("move zoom resize viewreset", function () {
 });
 
 const swipeHandle = document.getElementById("swipe-handle");
-map.getContainer().appendChild(swipeHandle);
+
 let isDragging = false;
 
 function moveSwipe(clientX) {
@@ -243,7 +243,7 @@ const styles = {
     }
 };
 
-async function loadGeoJSON(path, style, pane) {
+async function loadGeoJSON(path, style, paneName) {
     const response = await fetch(path);
 
     if (!response.ok) {
@@ -255,11 +255,15 @@ async function loadGeoJSON(path, style, pane) {
     const data = await response.json();
 
     return L.geoJSON(data, {
-        pane: pane,
-        
-        style: {style,
-                pane: pane
-               }});
+        pane: paneName,
+
+        style: function () {
+            return {
+                ...style,
+                pane: paneName
+            };
+        }
+    });
 }
 
 async function initialiseMap() {

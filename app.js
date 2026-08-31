@@ -384,9 +384,23 @@ async function initialiseMap() {
 
         granica.addTo(map);
 
-        /* =========================
-   KONTROLA WARSTW
-   ========================= */
+        // =========================
+        // PANEL WARSTW
+        // =========================
+        
+        const layerToggle = document.getElementById("layer-toggle");
+        const layerPanel = document.getElementById("layer-panel");
+        
+        layerToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        
+            layerPanel.classList.toggle("open");
+        });
+        
+       // =========================
+       // KONTROLA WARSTW
+       // =========================
 
         const layerToggle = document.getElementById("layer-toggle");
         const layerPanel = document.getElementById("layer-panel");

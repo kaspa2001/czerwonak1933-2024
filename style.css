@@ -58,6 +58,8 @@ header p {
 #map {
     position: relative;
     isolation: isolate;
+    overflow: hidden;
+}
 
     width: 100%;
     height: 72vh;
@@ -114,16 +116,11 @@ footer {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 50%;
-
-    width: 44px;
+    width: 40px;
     transform: translateX(-50%);
-
     z-index: 1000;
     cursor: ew-resize;
-    pointer-events: auto;
     touch-action: none;
-    user-select: none;
 }
 
 .swipe-line {
@@ -131,33 +128,23 @@ footer {
     top: 0;
     bottom: 0;
     left: 50%;
-
     width: 3px;
     transform: translateX(-50%);
-
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow:
-        0 0 0 1px rgba(35, 75, 52, 0.35),
-        0 0 5px rgba(0, 0, 0, 0.35);
-
-    pointer-events: none;
+    background: white;
+    box-shadow: 0 0 3px rgba(0,0,0,0.5);
 }
 
 .swipe-button {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
 
     width: 42px;
     height: 42px;
 
-    transform: translate(-50%, -50%);
-
-    border: 2px solid #234b34;
     border-radius: 50%;
-
-    background: #ffffff;
-    color: #234b34;
+    background: white;
 
     display: flex;
     align-items: center;
@@ -165,10 +152,6 @@ footer {
 
     font-size: 20px;
     font-weight: bold;
-    line-height: 1;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-
-    pointer-events: none;
-    user-select: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.4);
 }

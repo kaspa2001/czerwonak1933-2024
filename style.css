@@ -347,3 +347,152 @@ footer {
         max-height: 60vh;
     }
 }
+
+/* =========================
+   WYNIKI — NAJWAŻNIEJSZE ZMIANY
+   ========================= */
+
+.results-section {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+
+    padding: 10px 18px 50px;
+}
+
+.results-heading {
+    margin-bottom: 22px;
+}
+
+.results-heading h2 {
+    margin: 0 0 6px;
+
+    font-size: 28px;
+
+    color: #234b34;
+}
+
+.results-heading p {
+    margin: 0;
+
+    color: #66736b;
+
+    line-height: 1.5;
+}
+
+.results-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.result-card {
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8dfda;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(28, 54, 37, 0.08);
+}
+
+.result-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.result-card h3 {
+    margin: 0 0 14px;
+
+    font-size: 19px;
+
+    color: #234b34;
+}
+
+.result-values {
+    margin-bottom: 10px;
+
+    font-size: 15px;
+
+    color: #24322a;
+}
+
+.result-values strong {
+    display: block;
+
+    line-height: 1.4;
+}
+
+.result-change {
+    margin-bottom: 12px;
+
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.result-change span {
+    display: block;
+
+    margin-top: 2px;
+
+    font-size: 15px;
+}
+
+.result-change.increase {
+    color: #39704a;
+}
+
+.result-change.decrease {
+    color: #a0473c;
+}
+
+.result-card p {
+    margin: 0;
+
+    color: #66736b;
+
+    font-size: 14px;
+
+    line-height: 1.45;
+}
+
+.results-source {
+    margin: 14px 0 0;
+
+    font-size: 12px;
+
+    color: #7a857e;
+}
+
+
+/* =========================
+   WYNIKI — TELEFONY
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .results-section {
+        padding: 10px 10px 35px;
+    }
+
+    .results-heading h2 {
+        font-size: 24px;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

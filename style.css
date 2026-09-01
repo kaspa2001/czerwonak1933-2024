@@ -666,3 +666,112 @@ footer {
     }
 
 }
+/* =========================
+   WSKAŹNIK LUCI
+   ========================= */
+
+.luci-highlight {
+    margin-top: 28px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 34px;
+
+    padding: 30px 34px;
+
+    background: #234b34;
+
+    border-radius: 12px;
+
+    color: #ffffff;
+}
+
+.luci-number {
+    flex-shrink: 0;
+
+    font-size: 72px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.luci-content {
+    max-width: 850px;
+}
+
+.luci-content h3 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+
+    color: #ffffff;
+}
+
+.luci-content > p {
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
+    color: #e7eee9;
+}
+
+.luci-period {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 14px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+}
+
+.luci-arrow {
+    font-size: 20px;
+
+    opacity: 0.8;
+}
+
+.luci-method {
+    margin-top: 12px !important;
+
+    font-size: 12px !important;
+
+    color: #bfcfc4 !important;
+
+    line-height: 1.45 !important;
+}
+
+
+/* =========================
+   LUCI — TELEFONY
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .luci-highlight {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 16px;
+
+        padding: 25px 22px;
+    }
+
+    .luci-number {
+        font-size: 58px;
+    }
+
+    .luci-content h3 {
+        font-size: 21px;
+    }
+
+}

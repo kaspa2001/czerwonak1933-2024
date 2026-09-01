@@ -453,8 +453,9 @@ footer {
     }
 
 }
+
 /* =========================
-   WYKRES STRUKTURY
+   WYKRES STRUKTURY UŻYTKOWANIA
    ========================= */
 
 .chart-section {
@@ -475,17 +476,13 @@ footer {
 
 .chart-heading h3 {
     margin: 0 0 6px;
-
     font-size: 23px;
-
     color: #234b34;
 }
 
 .chart-heading p {
     margin: 0;
-
     color: #66736b;
-
     line-height: 1.5;
 }
 
@@ -502,14 +499,13 @@ footer {
 
     gap: 28px;
 
-    padding: 0 20px 0;
+    padding: 0 20px;
 
     border-bottom: 1px solid #cfd7d1;
 }
 
 .chart-column {
     height: 100%;
-
     flex: 1;
 
     max-width: 110px;
@@ -543,14 +539,10 @@ footer {
 
 .chart-segment {
     width: 100%;
-
     flex-shrink: 0;
 }
 
-/*
- * Kolory odpowiadają kolorom klas
- * wykorzystanym na mapie.
- */
+/* Kolory zgodne z mapą */
 
 .chart-segment.rolne,
 .legend-box.rolne {
@@ -594,13 +586,12 @@ footer {
 
 
 /* =========================
-   LEGENDA WYKRESU
+   LEGENDA
    ========================= */
 
 .chart-legend {
     display: flex;
     flex-wrap: wrap;
-
     justify-content: center;
 
     gap: 12px 20px;
@@ -630,7 +621,7 @@ footer {
 
 
 /* =========================
-   OPIS WYKRESU
+   OPIS POD WYKRESEM
    ========================= */
 
 .chart-note {
@@ -659,25 +650,19 @@ footer {
 
     .chart-bars {
         height: 300px;
-
         gap: 7px;
-
         padding: 0 3px;
     }
 
     .chart-column {
         max-width: none;
-
         font-size: 10px;
     }
 
     .chart-legend {
         justify-content: flex-start;
-
         gap: 9px 14px;
-
         font-size: 12px;
     }
 
 }
-

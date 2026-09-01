@@ -453,3 +453,231 @@ footer {
     }
 
 }
+/* =========================
+   WYKRES STRUKTURY
+   ========================= */
+
+.chart-section {
+    margin-top: 42px;
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #d8dfda;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(28, 54, 37, 0.08);
+}
+
+.chart-heading {
+    margin-bottom: 24px;
+}
+
+.chart-heading h3 {
+    margin: 0 0 6px;
+
+    font-size: 23px;
+
+    color: #234b34;
+}
+
+.chart-heading p {
+    margin: 0;
+
+    color: #66736b;
+
+    line-height: 1.5;
+}
+
+.chart-container {
+    width: 100%;
+}
+
+.chart-bars {
+    height: 360px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    gap: 28px;
+
+    padding: 0 20px 0;
+
+    border-bottom: 1px solid #cfd7d1;
+}
+
+.chart-column {
+    height: 100%;
+
+    flex: 1;
+
+    max-width: 110px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #365341;
+}
+
+.chart-bar {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    border-radius: 5px 5px 0 0;
+
+    background: #edf1ee;
+}
+
+.chart-segment {
+    width: 100%;
+
+    flex-shrink: 0;
+}
+
+/*
+ * Kolory odpowiadają kolorom klas
+ * wykorzystanym na mapie.
+ */
+
+.chart-segment.rolne,
+.legend-box.rolne {
+    background: #f4dc72;
+}
+
+.chart-segment.las,
+.legend-box.las {
+    background: #69a85f;
+}
+
+.chart-segment.zielone,
+.legend-box.zielone {
+    background: #a8cf7a;
+}
+
+.chart-segment.zabudowa,
+.legend-box.zabudowa {
+    background: #d64b45;
+}
+
+.chart-segment.przemysl,
+.legend-box.przemysl {
+    background: #9770a8;
+}
+
+.chart-segment.wody,
+.legend-box.wody {
+    background: #73b7df;
+}
+
+.chart-segment.cmentarze,
+.legend-box.cmentarze {
+    background: #739b77;
+}
+
+.chart-segment.nieuzytki,
+.legend-box.nieuzytki {
+    background: #c8bca8;
+}
+
+
+/* =========================
+   LEGENDA WYKRESU
+   ========================= */
+
+.chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px 20px;
+
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #435148;
+}
+
+.chart-legend span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.legend-box {
+    display: inline-block;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 2px;
+}
+
+
+/* =========================
+   OPIS WYKRESU
+   ========================= */
+
+.chart-note {
+    margin-top: 18px;
+    padding-top: 14px;
+
+    border-top: 1px solid #e1e6e2;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #7a857e;
+}
+
+
+/* =========================
+   WYKRES — TELEFONY
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .chart-section {
+        padding: 20px 14px;
+    }
+
+    .chart-bars {
+        height: 300px;
+
+        gap: 7px;
+
+        padding: 0 3px;
+    }
+
+    .chart-column {
+        max-width: none;
+
+        font-size: 10px;
+    }
+
+    .chart-legend {
+        justify-content: flex-start;
+
+        gap: 9px 14px;
+
+        font-size: 12px;
+    }
+
+}
+

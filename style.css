@@ -2073,3 +2073,125 @@ footer {
     }
 
 }
+
+/* =========================
+   KAFELKI NAWIGACJI
+   ========================= */
+
+.site-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+
+    max-width: 1000px;
+    margin: 26px auto 4px;
+}
+
+.nav-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 78px;
+    padding: 16px 20px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+    text-decoration: none;
+
+    background: #ffffff;
+    color: #174f3b;
+
+    border: 1px solid #dce5e0;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #8fa99c;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+}
+
+
+/* AKTYWNY KAFEL */
+
+.nav-card.active {
+    background: #18583f;
+    color: #ffffff;
+
+    border-color: #18583f;
+
+    box-shadow: 0 5px 16px rgba(24, 88, 63, 0.22);
+}
+
+.nav-card.active:hover {
+    background: #164f39;
+    border-color: #164f39;
+}
+
+
+/* TEKST */
+
+.nav-card-title {
+    display: block;
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.nav-card-description {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 0.78rem;
+    font-weight: 400;
+
+    line-height: 1.35;
+
+    color: #66756e;
+}
+
+.nav-card.active .nav-card-description {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* TELEFONY */
+
+@media (max-width: 700px) {
+
+    .site-nav {
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+    .nav-card {
+        min-height: 62px;
+        padding: 13px 16px;
+    }
+
+    .nav-card-title {
+        font-size: 0.95rem;
+    }
+
+    .nav-card-description {
+        font-size: 0.75rem;
+    }
+
+}

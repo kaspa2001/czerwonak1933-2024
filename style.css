@@ -324,15 +324,18 @@ header p {
 }
 
 /* =========================
-   WŁASNY TRYB PEŁNOEKRANOWY
-   DLA iPHONE / iPAD
+   WŁASNY FULLSCREEN
+   iPHONE / iPAD
    ========================= */
 
 #map.mobile-fullscreen {
 
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 
     width: 100vw;
     height: 100dvh;

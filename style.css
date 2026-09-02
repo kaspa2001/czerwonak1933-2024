@@ -358,12 +358,6 @@ header p {
  * kiedy mapa jest w trybie pełnoekranowym.
  */
 
-html:has(#map.mobile-fullscreen),
-body:has(#map.mobile-fullscreen) {
-
-    overflow: hidden;
-}
-
 /* =========================
    PODZIAŁKA
    ========================= */

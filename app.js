@@ -103,6 +103,116 @@ map.on("move zoom resize viewreset", function () {
 
 const swipeHandle = document.getElementById("swipe-handle");
 
+// =========================
+// TRYB PEŁNOEKRANOWY
+// =========================
+
+const fullscreenToggle =
+    document.getElementById("fullscreen-toggle");
+
+const mapElement =
+    document.getElementById("map");
+
+function updateFullscreenButton() {
+
+    if (!fullscreenToggle) {
+        return;
+    }
+
+    if (
+        document.fullscreenElement ||
+        mapElement.classList.contains("mobile-fullscreen")
+    ) {
+        fullscreenToggle.textContent =
+            "⛶ Zamknij pełny ekran";
+    } else {
+        fullscreenToggle.textContent =
+            "⛶ Pełny ekran";
+    }
+}
+
+
+function refreshMap() {
+
+    setTimeout(function () {
+
+        map.invalidateSize();
+
+        updateSwipe(swipePosition);
+
+        swipeHandle.style.left =
+            `${swipePosition}%`;
+
+    }, 200);
+}
+
+
+fullscreenToggle.addEventListener(
+    "click",
+    function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        /*
+         * iPhone / iPad
+         */
+
+        const isIOS =
+            /iPhone|iPad|iPod/.test(
+                navigator.userAgent
+            ) ||
+            (
+                navigator.platform === "MacIntel" &&
+                navigator.maxTouchPoints > 1
+            );
+
+        if (isIOS) {
+
+            mapElement.classList.toggle(
+                "mobile-fullscreen"
+            );
+
+            updateFullscreenButton();
+
+            refreshMap();
+
+            return;
+        }
+
+
+        /*
+         * Komputer / Android
+         */
+
+        if (!document.fullscreenElement) {
+
+            if (mapElement.requestFullscreen) {
+
+                mapElement.requestFullscreen();
+
+            }
+
+        } else {
+
+            document.exitFullscreen();
+
+        }
+
+    }
+);
+
+
+document.addEventListener(
+    "fullscreenchange",
+    function () {
+
+        updateFullscreenButton();
+
+        refreshMap();
+
+    }
+);
 
 
 let isDragging = false;

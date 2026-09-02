@@ -596,6 +596,8 @@ footer {
     padding: 0 20px;
 
     border-bottom: 1px solid #cfd7d1;
+
+    flex: 1;
 }
 
 .chart-column {

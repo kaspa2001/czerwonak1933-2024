@@ -592,9 +592,17 @@ async function initialiseMap() {
          */
 
         if (granica.getBounds().isValid()) {
+
+            map.setMaxBounds(
+                granica.getBounds().pad(0.15)
+            );
+        
+            map.options.maxBoundsViscosity = 1.0;
+        
             map.fitBounds(granica.getBounds(), {
                 padding: [20, 20]
             });
+        
         } else {
             map.setView([52.51, 17.0], 11);
         }

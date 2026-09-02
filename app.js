@@ -103,43 +103,147 @@ map.on("move zoom resize viewreset", function () {
 
 const swipeHandle = document.getElementById("swipe-handle");
 
-    // =========================
-    // TRYB PEŁNOEKRANOWY
-    // =========================
-    
-    const fullscreenToggle = document.getElementById("fullscreen-toggle");
-    
-    if (fullscreenToggle) {
-    
-        fullscreenToggle.addEventListener("click", function (event) {
-    
-            event.preventDefault();
-            event.stopPropagation();
-    
-            const mapElement = document.getElementById("map");
+   // =========================
+// TRYB PEŁNOEKRANOWY
+// =========================
 
-    if (!document.fullscreenElement && !mapElement.classList.contains("mobile-fullscreen")) {
-    
-        if (mapElement.requestFullscreen) {
-            mapElement.requestFullscreen().catch(function () {
-                mapElement.classList.add("mobile-fullscreen");
-                updateFullscreenButton();
-            });
-        } else {
-            mapElement.classList.add("mobile-fullscreen");
-            updateFullscreenButton();
-        }
-    
-    } else if (document.fullscreenElement) {
-    
-        document.exitFullscreen();
-    
-    } else {
-    
-        mapElement.classList.remove("mobile-fullscreen");
-        updateFullscreenButton();
-    
+const fullscreenToggle = document.getElementById("fullscreen-toggle");
+const mapElement = document.getElementById("map");
+
+function isIOS() {
+    return (
+        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (
+            navigator.platform === "MacIntel" &&
+            navigator.maxTouchPoints > 1
+        )
+    );
+}
+
+function updateFullscreenButton() {
+
+    if (!fullscreenToggle) {
+        return;
     }
+
+    const mobileFullscreen =
+        mapElement.classList.contains("mobile-fullscreen");
+
+    if (document.fullscreenElement || mobileFullscreen) {
+        fullscreenToggle.textContent = "⛶ Zamknij pełny ekran";
+    } else {
+        fullscreenToggle.textContent = "⛶ Pełny ekran";
+    }
+}
+
+function refreshMapAfterFullscreen() {
+
+    setTimeout(function () {
+
+        map.invalidateSize();
+
+        updateSwipe(swipePosition);
+
+        swipeHandle.style.left =
+            `${swipePosition}%`;
+
+    }, 150);
+}
+
+
+if (fullscreenToggle) {
+
+    fullscreenToggle.addEventListener("click", function (event) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        /*
+         * iPhone / iPad
+         *
+         * Safari nie obsługuje requestFullscreen()
+         * dla elementu mapy tak jak przeglądarki
+         * desktopowe.
+         *
+         * Dlatego używamy własnego trybu CSS.
+         */
+
+        if (isIOS()) {
+
+            mapElement.classList.toggle("mobile-fullscreen");
+
+            updateFullscreenButton();
+
+            refreshMapAfterFullscreen();
+
+            return;
+        }
+
+
+        /*
+         * Pozostałe urządzenia:
+         * używamy natywnego Fullscreen API.
+         */
+
+        if (!document.fullscreenElement) {
+
+            if (mapElement.requestFullscreen) {
+
+                mapElement.requestFullscreen().catch(function () {
+
+                    /*
+                     * Fallback, gdy przeglądarka
+                     * odmówi wejścia w fullscreen.
+                     */
+
+                    mapElement.classList.add(
+                        "mobile-fullscreen"
+                    );
+
+                    updateFullscreenButton();
+
+                    refreshMapAfterFullscreen();
+
+                });
+
+            } else {
+
+                mapElement.classList.add(
+                    "mobile-fullscreen"
+                );
+
+                updateFullscreenButton();
+
+                refreshMapAfterFullscreen();
+
+            }
+
+        } else {
+
+            document.exitFullscreen();
+
+        }
+
+    });
+
+
+    /*
+     * Reakcja na wejście/wyjście
+     * z natywnego fullscreen.
+     */
+
+    document.addEventListener(
+        "fullscreenchange",
+        function () {
+
+            updateFullscreenButton();
+
+            refreshMapAfterFullscreen();
+
+        }
+    );
+
+}
     
         document.addEventListener("fullscreenchange", function () {
     

@@ -21,7 +21,7 @@ const osm = L.tileLayer(
             '&copy; <a href="https://www.openstreetmap.org/copyright">' +
             "OpenStreetMap</a>"
     }
-).addTo(map);
+);
 
 map.createPane("leftPane");
 map.getPane("leftPane").style.zIndex = 401;

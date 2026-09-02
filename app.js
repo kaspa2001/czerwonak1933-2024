@@ -116,21 +116,30 @@ const swipeHandle = document.getElementById("swipe-handle");
             event.preventDefault();
             event.stopPropagation();
     
-            if (!document.fullscreenElement) {
+            const mapElement = document.getElementById("map");
+
+    if (!document.fullscreenElement && !mapElement.classList.contains("mobile-fullscreen")) {
     
-                const mapElement = document.getElementById("map");
+        if (mapElement.requestFullscreen) {
+            mapElement.requestFullscreen().catch(function () {
+                mapElement.classList.add("mobile-fullscreen");
+                updateFullscreenButton();
+            });
+        } else {
+            mapElement.classList.add("mobile-fullscreen");
+            updateFullscreenButton();
+        }
     
-                if (mapElement.requestFullscreen) {
-                    mapElement.requestFullscreen();
-                }
+    } else if (document.fullscreenElement) {
     
-            } else {
+        document.exitFullscreen();
     
-                document.exitFullscreen();
+    } else {
     
-            }
+        mapElement.classList.remove("mobile-fullscreen");
+        updateFullscreenButton();
     
-        });
+    }
     
         document.addEventListener("fullscreenchange", function () {
     

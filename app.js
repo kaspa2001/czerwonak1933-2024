@@ -393,6 +393,39 @@ async function initialiseMap() {
         // =========================
         // PANEL WARSTW
         // =========================
+
+        // =========================
+        // TRYB PEŁNOEKRANOWY
+        // =========================
+        
+        const fullscreenToggle = document.getElementById("fullscreen-toggle");
+        
+        fullscreenToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        
+            if (!document.fullscreenElement) {
+                map.getContainer().requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+        
+        function updateFullscreenButton() {
+            if (document.fullscreenElement) {
+                fullscreenToggle.textContent = "⛶ Zamknij pełny ekran";
+            } else {
+                fullscreenToggle.textContent = "⛶ Pełny ekran";
+            }
+        
+            setTimeout(function () {
+                map.invalidateSize();
+                updateSwipe(swipePosition);
+                swipeHandle.style.left = `${swipePosition}%`;
+            }, 100);
+        }
+        
+        document.addEventListener("fullscreenchange", updateFullscreenButton);
         
         const layerToggle = document.getElementById("layer-toggle");
         const layerPanel = document.getElementById("layer-panel");

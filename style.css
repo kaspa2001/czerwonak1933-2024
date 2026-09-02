@@ -324,6 +324,44 @@ header p {
 }
 
 /* =========================
+   WŁASNY TRYB PEŁNOEKRANOWY
+   DLA iPHONE / iPAD
+   ========================= */
+
+#map.mobile-fullscreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100vw;
+    height: 100dvh;
+
+    min-height: 0;
+
+    z-index: 9999;
+
+    border-radius: 0;
+    border: none;
+
+    box-shadow: none;
+
+    overflow: hidden;
+}
+
+
+/*
+ * Blokujemy przewijanie strony,
+ * kiedy mapa jest w trybie pełnoekranowym.
+ */
+
+html:has(#map.mobile-fullscreen),
+body:has(#map.mobile-fullscreen) {
+
+    overflow: hidden;
+}
+
+/* =========================
    PODZIAŁKA
    ========================= */
 

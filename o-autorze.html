@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>O autorze – Marcin Kamieniczny | Czerwonak 1933–2024</title>
+
+<meta name="description" content="Marcin Kamieniczny – geomatyk, kartograf i doktorant UAM zajmujący się fotogrametrią, bezzałogowymi statkami powietrznymi, teledetekcją, skaningiem laserowym i analizą danych przestrzennych.">
+<meta name="author" content="mgr inż. Marcin Kamieniczny">
+
+<link rel="canonical" href="https://czerwonak1933.pl/o-autorze.html">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="O autorze – Marcin Kamieniczny">
+<meta property="og:description" content="Autor projektu Czerwonak 1933–2024. Geomatyka, kartografia, fotogrametria, UAV i teledetekcja środowiska.">
+<meta property="og:url" content="https://czerwonak1933.pl/o-autorze.html">
+
+<link rel="stylesheet" href="./style.css">
+
+<style>
+.author-page{width:min(1100px,100%);margin:0 auto;padding:0 20px 60px}
+.author-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr);gap:34px;align-items:stretch;padding:54px 20px 42px}
+.author-kicker{margin-bottom:12px;color:#66736b;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.author-hero h1{margin:0 0 12px;color:#234b34;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05}
+.author-subtitle{margin:0 0 18px;color:#55645b;font-size:1.15rem;line-height:1.6}
+.author-intro{margin:0;color:#435148;font-size:16px;line-height:1.75}
+.photo-placeholder{min-height:300px;border:1px dashed #cbd5ce;border-radius:14px;background:#f4f7f5;display:flex;align-items:center;justify-content:center;text-align:center;color:#78847d;padding:25px}
+.author-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 36px}
+.author-nav a{display:inline-block;padding:8px 12px;border:1px solid #d8dfda;border-radius:999px;background:#fff;color:#365341;text-decoration:none;font-size:13px;font-weight:700}
+.author-nav a:hover{background:#f3f5f3}
+.author-section{margin-top:28px;padding:34px 38px;background:#fff;border:1px solid #d8dfda;border-radius:14px;box-shadow:0 4px 14px rgba(28,54,37,.07)}
+.author-section h2{margin:0 0 18px;color:#234b34;font-size:clamp(1.55rem,3vw,2.1rem);line-height:1.2}
+.author-section h3{margin:28px 0 10px;color:#365341;font-size:1.18rem}
+.author-section h3:first-child{margin-top:0}
+.author-section p{margin:0 0 16px;color:#435148;font-size:16px;line-height:1.75}
+.author-section p:last-child{margin-bottom:0}
+.author-section ul{margin:10px 0 0;padding-left:23px;color:#435148;line-height:1.7}
+.author-section li{margin-bottom:7px}
+.author-timeline{position:relative;margin-top:24px;padding-left:30px;border-left:2px solid #d8dfda}
+.author-timeline-item{position:relative;margin-bottom:28px}
+.author-timeline-item:last-child{margin-bottom:0}
+.author-timeline-item:before{content:"";position:absolute;left:-39px;top:4px;width:12px;height:12px;border-radius:50%;background:#365341;border:3px solid #f5f7f5}
+.author-year{margin-bottom:5px;color:#365341;font-size:13px;font-weight:800;letter-spacing:.04em}
+.author-timeline-item strong{display:block;margin-bottom:5px;color:#234b34}
+.interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.interest-item{padding:22px;border:1px solid #dfe5e1;border-radius:10px;background:#fafcfb}
+.interest-item strong{display:block;margin-bottom:7px;color:#234b34;font-size:1.05rem}
+.interest-item p{margin:0;color:#66736b;font-size:14px;line-height:1.55}
+.uav-details{margin-top:20px}
+.uav-details summary{cursor:pointer;padding:17px 19px;border:1px solid #d8dfda;border-radius:9px;background:#f7faf8;color:#365341;font-weight:700;list-style:none}
+.uav-details summary::-webkit-details-marker{display:none}
+.uav-details summary:after{content:"＋";float:right;font-size:18px}
+.uav-details[open] summary:after{content:"−"}
+.uav-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.uav-card{padding:16px 18px;border:1px solid #e0e6e2;border-radius:9px;background:#fff}
+.uav-card strong{display:block;margin-bottom:4px;color:#234b34}
+.uav-card span{color:#66736b;font-size:13px;line-height:1.5}
+.achievement{margin-top:20px;padding:22px 24px;border-left:4px solid #365341;background:#f3f6f3;border-radius:0 10px 10px 0}
+.achievement strong{display:block;margin-bottom:6px;color:#234b34}
+.achievement p{margin:0}
+.publication-box{margin-top:20px;padding:22px 24px;border:1px solid #d8dfda;border-radius:10px;background:#f7faf8}
+.publication-box strong{display:block;margin-bottom:8px;color:#234b34}
+.publication-box a{color:#365341;font-weight:700;text-decoration:none;word-break:break-word}
+.publication-box a:hover{text-decoration:underline}
+.profile-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
+.profile-link{display:block;padding:15px 17px;border:1px solid #d8dfda;border-radius:9px;background:#fff;color:#365341;text-decoration:none;font-size:14px;font-weight:700}
+.profile-link:hover{background:#f3f6f3}
+.project-callout{margin:24px 0;padding:22px 24px;border-left:4px solid #365341;background:#f3f6f3;border-radius:0 10px 10px 0}
+.project-callout p{margin:0}
+@media(max-width:760px){
+.author-page{padding:0 10px 40px}
+.author-hero{grid-template-columns:1fr;padding:34px 10px 28px}
+.photo-placeholder{min-height:220px}
+.author-section{padding:24px 20px;border-radius:11px}
+.author-section p{font-size:15px;line-height:1.68}
+.interest-grid,.uav-list,.profile-links{grid-template-columns:1fr}
+}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"ProfilePage",
+ "name":"O autorze – Marcin Kamieniczny",
+ "description":"Profil autora projektu Czerwonak 1933–2024.",
+ "inLanguage":"pl-PL",
+ "mainEntity":{
+   "@type":"Person",
+   "name":"Marcin Kamieniczny",
+   "jobTitle":"Doktorant",
+   "affiliation":{
+     "@type":"CollegeOrUniversity",
+     "name":"Uniwersytet im. Adama Mickiewicza w Poznaniu"
+   },
+   "sameAs":[
+     "https://www.researchgate.net/profile/Marcin-Kamieniczny",
+     "https://orcid.org/0009-0004-8057-5134",
+     "https://researchportal.amu.edu.pl/info/author/UAM8b265624723847a79dafcfa91e46486d",
+     "https://www.linkedin.com/in/marcin-kamieniczny-1544962ab/",
+     "https://github.com/kaspa2001"
+   ]
+ }
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>Gmina Czerwonak 1933–2024</h1>
+<p>Kartograficzna analiza zmian struktury użytkowania terenu</p>
+</header>
+
+<main class="author-page">
+
+<section class="author-hero">
+<div>
+<div class="author-kicker">O autorze</div>
+<h1>mgr inż. Marcin Kamieniczny</h1>
+<p class="author-subtitle">Geomatyka i kartografia · fotogrametria · UAV · teledetekcja</p>
+<p class="author-intro">Zajmuję się pozyskiwaniem i analizą danych przestrzennych, ze szczególnym uwzględnieniem fotogrametrii, bezzałogowych statków powietrznych, teledetekcji oraz skaningu laserowego. Obecnie rozwijam te zainteresowania w ramach studiów doktoranckich na Uniwersytecie im. Adama Mickiewicza w Poznaniu.</p>
+</div>
+<div class="photo-placeholder"><strong>Miejsce na zdjęcie autora</strong><br><br>Profesjonalne zdjęcie można dodać tutaj później.</div>
+</section>
+
+<nav class="author-nav" aria-label="Nawigacja strony autora">
+<a href="./index.html">Mapa i wyniki</a>
+<a href="./o-projekcie.html">O projekcie</a>
+<a href="#droga">Droga akademicka</a>
+<a href="#badania">Badania</a>
+<a href="#obszary">Zainteresowania</a>
+<a href="#uav">UAV</a>
+<a href="#czerwonak">Czerwonak</a>
+<a href="#publikacje">Publikacje</a>
+<a href="#profile">Profile</a>
+</nav>
+
+<section class="author-section" id="droga">
+<h2>1. Droga akademicka</h2>
+<p>Moja ścieżka kształcenia od początku związana jest z geodezją, kartografią i geomatyką. Kolejne etapy studiów pozwoliły mi przejść od klasycznych podstaw pomiarów i opracowań kartograficznych do współczesnych metod pozyskiwania oraz analizy danych przestrzennych.</p>
+<div class="author-timeline">
+<div class="author-timeline-item"><div class="author-year">10/2020</div><strong>Geodezja i Kartografia</strong><p>Rozpoczęcie studiów inżynierskich na Uniwersytecie im. Adama Mickiewicza w Poznaniu.</p></div>
+<div class="author-timeline-item"><div class="author-year">02/2023</div><strong>Inżynier + Geomatyka i Kartografia</strong><p>Ukończenie studiów inżynierskich i rozpoczęcie studiów magisterskich na kierunku Geomatyka i Kartografia.</p></div>
+<div class="author-timeline-item"><div class="author-year">07/2025</div><strong>Magister inżynier</strong><p>Ukończenie studiów magisterskich. Praca „Kartograficzna analiza zmian struktury użytkowania terenu Gminy Czerwonak w latach 1933–2024” zajęła II miejsce w Wydziałowym Konkursie Prac Dyplomowych UAM.</p></div>
+<div class="author-timeline-item"><div class="author-year">10/2025</div><strong>Szkoła Doktorska Nauk Przyrodniczych UAM</strong><p>Rozpoczęcie kształcenia doktorskiego w dyscyplinie Nauki o Ziemi i Środowisku. Badania prowadzę w ramach Zakładu Teledetekcji Środowiska i Gleboznawstwa.</p></div>
+</div>
+</section>
+
+<section class="author-section" id="badania">
+<h2>2. Badania doktoranckie</h2>
+<p>Moje obecne badania dotyczą możliwości obserwacji powierzchni terenu znajdującej się pod okapem leśnym z wykorzystaniem danych fotogrametrycznych UAV i modelowania geometrii promieni obrazowych.</p>
+<p>Roboczy tytuł badań brzmi: <strong>„Ocena możliwości obserwacji powierzchni terenu pod okapem leśnym z wykorzystaniem modelowania geometrii promieni obrazowych oraz wysokoredundantnych danych fotogrametrycznych UAV”</strong>.</p>
+<p>W praktyce interesuje mnie między innymi to, w jaki sposób odpowiednio zaprojektowane, wysokoredundantne zobrazowania fotogrametryczne mogą zwiększać możliwość dotarcia informacją obrazową do powierzchni terenu znajdującej się pod koronami drzew.</p>
+</section>
+
+<section class="author-section" id="obszary">
+<h2>3. Obszary zainteresowań</h2>
+<p>Poza tematyką doktoratu zajmuję się szerzej współczesnymi metodami pozyskiwania i przetwarzania danych o przestrzeni.</p>
+<div class="interest-grid">
+<div class="interest-item"><strong>Fotogrametria</strong><p>Rekonstrukcja przestrzeni na podstawie zobrazowań, opracowanie produktów fotogrametrycznych i analiza geometrii obrazów.</p></div>
+<div class="interest-item"><strong>Bezzałogowe statki powietrzne</strong><p>Planowanie i wykonywanie nalotów oraz wykorzystanie UAV jako platform pomiarowych.</p></div>
+<div class="interest-item"><strong>Skaning laserowy</strong><p>Pozyskiwanie i analiza danych 3D oraz praca z chmurami punktów.</p></div>
+<div class="interest-item"><strong>Teledetekcja</strong><p>Wykorzystanie zobrazowań i metod teledetekcyjnych do obserwacji powierzchni Ziemi i środowiska.</p></div>
+<div class="interest-item"><strong>Gaussian Splatting</strong><p>Eksperymentowanie z nowoczesnymi metodami reprezentacji i wizualizacji przestrzeni 3D.</p></div>
+<div class="interest-item"><strong>Dane przestrzenne</strong><p>Łączenie danych z różnych źródeł i ich analiza w środowisku GIS.</p></div>
+</div>
+</section>
+
+<section class="author-section" id="uav">
+<h2>4. Drony i pozyskiwanie danych</h2>
+<p>Bezzałogowe statki powietrzne są jednym z narzędzi, które wykorzystuję w pracy z danymi przestrzennymi. Mam doświadczenie zarówno w planowaniu nalotów fotogrametrycznych, jak i w późniejszym przetwarzaniu pozyskanych zobrazowań.</p>
+<p>Posiadam przygotowanie do wykonywania operacji z wykorzystaniem bezzałogowych statków powietrznych oraz doświadczenie w pracy z różnymi platformami. Wchodzę również w świat dronów FPV.</p>
+
+<details class="uav-details">
+<summary>Platformy, z którymi mam doświadczenie</summary>
+<div class="uav-list">
+<div class="uav-card"><strong>DJI Matrice 4T</strong><span>Platforma wykorzystywana m.in. do pracy z zobrazowaniami RGB i termalnymi.</span></div>
+<div class="uav-card"><strong>DJI Mavic 3M</strong><span>Platforma multispektralna wykorzystywana w zadaniach związanych z pozyskiwaniem danych obrazowych.</span></div>
+<div class="uav-card"><strong>DJI Mavic 2 Pro</strong><span>Platforma wyposażona w kamerę RGB, wykorzystywana do pozyskiwania zobrazowań.</span></div>
+<div class="uav-card"><strong>DJI Mini 3 Pro</strong><span>Kompaktowa platforma wyposażona w kamerę RGB.</span></div>
+<div class="uav-card"><strong>FPV</strong><span>Rozwijam doświadczenie w zakresie bezzałogowych statków powietrznych FPV.</span></div>
+</div>
+</details>
+</section>
+
+<section class="author-section" id="czerwonak">
+<h2>5. Dlaczego powstał projekt Czerwonak 1933–2024?</h2>
+<p>Gmina Czerwonak nie jest dla mnie wyłącznie obszarem badań. To miejsce, w którym mieszkam, dlatego możliwość prześledzenia zmian zachodzących tutaj na przestrzeni niemal stu lat była dla mnie szczególnie interesująca.</p>
+<p>Praca magisterska stała się punktem wyjścia do stworzenia projektu, który pozwala udostępnić jej wyniki w bardziej przystępnej i interaktywnej formie. Zależało mi przede wszystkim na tym, aby przygotowane dane i mapy nie pozostały wyłącznie elementem pracy dyplomowej, ale mogły być wykorzystane przez mieszkańców gminy oraz osoby zainteresowane jej historią i rozwojem przestrzennym.</p>
+<div class="project-callout"><p>Interaktywna mapa jest rozwinięciem pracy badawczej, ale również próbą pokazania, że dane przestrzenne mogą być sposobem na opowiadanie lokalnej historii.</p></div>
+</section>
+
+<section class="author-section" id="publikacje">
+<h2>6. Publikacje i osiągnięcia</h2>
+<p>Wyniki moich zainteresowań badawczych obejmują również publikacje związane z fotogrametrią i jakością pozyskiwanych danych.</p>
+<div class="publication-box">
+<strong>Publikacja naukowa</strong>
+<p>Artykuł dotyczący wpływu rozmieszczenia punktów GCP na model fotogrametryczny.</p>
+<a href="https://doi.org/10.15576/GLL/208229" target="_blank" rel="noopener noreferrer">DOI: 10.15576/GLL/208229 →</a>
+</div>
+<div class="achievement">
+<strong>II miejsce – Wydziałowy Konkurs Prac Dyplomowych UAM</strong>
+<p>Praca magisterska „Kartograficzna analiza zmian struktury użytkowania terenu Gminy Czerwonak w latach 1933–2024”.</p>
+</div>
+</section>
+
+<section class="author-section" id="profile">
+<h2>7. Profile i kontakt zawodowy</h2>
+<p>Wybrane informacje o mojej działalności naukowej i zawodowej można znaleźć również w zewnętrznych profilach.</p>
+<div class="profile-links">
+<a class="profile-link" href="https://orcid.org/0009-0004-8057-5134" target="_blank" rel="noopener noreferrer">ORCID</a>
+<a class="profile-link" href="https://researchportal.amu.edu.pl/info/author/UAM8b265624723847a79dafcfa91e46486d" target="_blank" rel="noopener noreferrer">Baza UAM / Research Portal</a>
+<a class="profile-link" href="https://www.researchgate.net/profile/Marcin-Kamieniczny" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+<a class="profile-link" href="https://www.linkedin.com/in/marcin-kamieniczny-1544962ab/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="profile-link" href="https://github.com/kaspa2001" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+</section>
+
+<section class="author-section">
+<h2>8. Poza projektem</h2>
+<p>Projekt Czerwonak 1933–2024 jest jednym z przykładów wykorzystania przeze mnie danych przestrzennych do analizy zmian zachodzących w środowisku i krajobrazie. Moje obecne zainteresowania koncentrują się jednak przede wszystkim na nowych metodach pozyskiwania danych, fotogrametrii UAV, teledetekcji oraz rekonstrukcji i analizy przestrzeni 3D.</p>
+<p>Łączę w tym celu klasyczne podejście kartograficzne z nowoczesnymi technikami pomiarowymi i obliczeniowymi. To właśnie połączenie różnych źródeł danych — od historycznych map po współczesne zobrazowania i modele 3D — jest jednym z kierunków, który najbardziej interesuje mnie w geomatyce.</p>
+</section>
+
+</main>
+
+<footer>
+<strong>mgr inż. Marcin Kamieniczny</strong>
+<br>
+Uniwersytet im. Adama Mickiewicza w Poznaniu
+</footer>
+
+</body>
+</html>

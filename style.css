@@ -2136,3 +2136,30 @@ footer {
     }
 
 }
+
+/* =========================
+   SKALA WYKRESU
+   ========================= */
+
+.chart-with-scale {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.chart-scale {
+    height: 360px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+
+    flex-shrink: 0;
+
+    font-size: 11px;
+    color: #7a857e;
+
+    text-align: right;
+}

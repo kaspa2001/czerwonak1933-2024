@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O projekcie – Gmina Czerwonak 1933–2024</title>
+<meta name="description" content="Opis projektu kartograficznej analizy zmian struktury użytkowania terenu gminy Czerwonak w latach 1933–2024: źródła, metody, wyniki, ograniczenia i interpretacja.">
+<meta name="author" content="mgr inż. Marcin Kamieniczny">
+<link rel="canonical" href="https://czerwonak1933.pl/o-projekcie.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:title" content="O projekcie – Gmina Czerwonak 1933–2024">
+<meta property="og:description" content="Jak powstała analiza zmian użytkowania terenu gminy Czerwonak? Źródła, metodyka, wyniki i ograniczenia badania.">
+<meta property="og:url" content="https://czerwonak1933.pl/o-projekcie.html">
+<link rel="stylesheet" href="./style.css">
+
+<style>
+.project-page{width:min(1100px,100%);margin:0 auto;padding:0 20px 60px}
+.project-hero{padding:54px 20px 42px;text-align:center}
+.project-hero h1{margin:0 auto 14px;max-width:900px;color:#234b34;font-size:clamp(2rem,5vw,3.4rem);line-height:1.1}
+.project-hero .lead{max-width:820px;margin:0 auto;color:#55645b;font-size:1.12rem;line-height:1.7}
+.project-kicker{margin-bottom:12px;color:#66736b;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.project-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 36px}
+.project-nav a{display:inline-block;padding:8px 12px;border:1px solid #d8dfda;border-radius:999px;background:#fff;color:#365341;text-decoration:none;font-size:13px;font-weight:700}
+.project-nav a:hover{background:#f3f5f3}
+.project-section{margin-top:28px;padding:34px 38px;background:#fff;border:1px solid #d8dfda;border-radius:14px;box-shadow:0 4px 14px rgba(28,54,37,.07)}
+.project-section h2{margin:0 0 18px;color:#234b34;font-size:clamp(1.55rem,3vw,2.1rem);line-height:1.2}
+.project-section h3{margin:28px 0 10px;color:#365341;font-size:1.18rem}
+.project-section h3:first-child{margin-top:0}
+.project-section p{margin:0 0 16px;color:#435148;font-size:16px;line-height:1.75}
+.project-section p:last-child{margin-bottom:0}
+.project-section ul,.project-section ol{margin:10px 0 18px;padding-left:24px;color:#435148;line-height:1.7}
+.project-section li{margin-bottom:7px}
+.project-callout{margin:24px 0;padding:22px 24px;border-left:4px solid #365341;background:#f3f6f3;border-radius:0 10px 10px 0}
+.project-callout p{margin:0}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.project-card{padding:22px;border:1px solid #dfe5e1;border-radius:10px;background:#fafcfb}
+.project-card strong{display:block;margin-bottom:7px;color:#234b34;font-size:1.05rem}
+.project-card span{color:#66736b;font-size:14px;line-height:1.55}
+.source-table-wrap{margin-top:20px;overflow-x:auto}
+.source-table{width:100%;border-collapse:collapse;min-width:720px;font-size:14px}
+.source-table th,.source-table td{padding:12px 13px;border-bottom:1px solid #e1e6e2;text-align:left;vertical-align:top}
+.source-table th{background:#f3f6f3;color:#365341;font-size:13px}
+.source-table td{color:#435148;line-height:1.5}
+.number-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.number-card{padding:20px;border-radius:10px;background:#234b34;color:#fff}
+.number-card .number{display:block;margin-bottom:6px;font-size:2rem;font-weight:800;line-height:1}
+.number-card .label{display:block;color:#e7eee9;font-size:14px;line-height:1.45}
+.luci-project{display:flex;align-items:center;gap:28px;margin-top:24px;padding:28px 30px;border-radius:12px;background:#234b34;color:#fff}
+.luci-project .big{flex:0 0 auto;font-size:4.5rem;line-height:1;font-weight:800}
+.luci-project h3{margin:0 0 8px;color:#fff;font-size:1.35rem}
+.luci-project p{margin:0;color:#e7eee9}
+.timeline-list{position:relative;margin-top:26px;padding-left:28px;border-left:2px solid #d8dfda}
+.timeline-item{position:relative;margin-bottom:26px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-item:before{content:"";position:absolute;left:-37px;top:4px;width:12px;height:12px;border-radius:50%;background:#365341;border:3px solid #f5f7f5}
+.timeline-year{margin-bottom:5px;color:#365341;font-size:13px;font-weight:800;letter-spacing:.04em}
+.timeline-item strong{display:block;margin-bottom:6px;color:#234b34}
+.timeline-item p{margin:0}
+.limitations{background:#fbfaf7;border-color:#e4dfd2}
+.limitations h2{color:#5f5541}
+.thesis-box{display:flex;justify-content:space-between;align-items:center;gap:24px;margin-top:22px;padding:24px;border:1px solid #d8dfda;border-radius:12px;background:#f7faf8}
+.thesis-box strong{display:block;margin-bottom:7px;color:#234b34;font-size:1.08rem}
+.thesis-box span{display:block;color:#66736b;line-height:1.5;font-size:14px}
+.project-button{flex:0 0 auto;display:inline-block;padding:11px 16px;border-radius:7px;background:#234b34;color:#fff;text-decoration:none;font-size:14px;font-weight:700}
+.project-button:hover{background:#365341}
+.project-footer-note{margin-top:30px;padding-top:20px;border-top:1px solid #d8dfda;color:#7a857e;font-size:13px;line-height:1.6}
+@media(max-width:700px){
+.project-page{padding:0 10px 40px}.project-hero{padding:34px 10px 28px}.project-hero .lead{font-size:1rem}
+.project-section{padding:24px 20px;border-radius:11px}.project-section p{font-size:15px;line-height:1.68}
+.project-grid,.number-grid{grid-template-columns:1fr}.luci-project{display:block;padding:24px 22px}.luci-project .big{margin-bottom:16px;font-size:3.6rem}
+.thesis-box{display:block}.project-button{margin-top:18px}.source-table{min-width:680px}
+}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":"O projekcie – Gmina Czerwonak 1933–2024",
+ "description":"Opis kartograficznej analizy zmian struktury użytkowania terenu gminy Czerwonak w latach 1933–2024.",
+ "inLanguage":"pl-PL",
+ "author":{"@type":"Person","name":"Marcin Kamieniczny"},
+ "mainEntityOfPage":{"@type":"WebPage","@id":"https://czerwonak1933.pl/o-projekcie.html"}
+}
+</script>
+</head>
+
+<body>
+<header>
+<h1>Gmina Czerwonak 1933–2024</h1>
+<p>Kartograficzna analiza zmian struktury użytkowania terenu</p>
+</header>
+
+<main class="project-page">
+
+<section class="project-hero">
+<div class="project-kicker">O projekcie</div>
+<h1>Nie chodziło wyłącznie o porównanie dwóch map</h1>
+<p class="lead">Ten projekt jest próbą odtworzenia niemal stuletniej historii przemian przestrzennych gminy Czerwonak na podstawie kolejnych opracowań kartograficznych. Za współczesną interaktywną mapą stoją georeferencja materiałów historycznych, ich wektoryzacja, ujednolicenie klas użytkowania terenu oraz analiza zmian wykonana w środowisku GIS.</p>
+</section>
+
+<nav class="project-nav" aria-label="Spis treści projektu">
+<a href="#cel">Cel</a><a href="#obszar">Obszar</a><a href="#zrodla">Źródła</a><a href="#metodyka">Metodyka</a><a href="#wyniki">Wyniki</a><a href="#interpretacja">Interpretacja</a><a href="#ograniczenia">Ograniczenia</a><a href="#praca">Praca magisterska</a>
+</nav>
+
+<section class="project-section" id="cel">
+<h2>1. Cel projektu</h2>
+<p>Głównym celem było przeprowadzenie spójnej metodologicznie analizy zmian struktury użytkowania terenu gminy Czerwonak w latach 1933–2024 na podstawie danych kartograficznych. Interesowało mnie nie tylko to, <em>co</em> się zmieniło, ale również <em>gdzie</em>, <em>w jakim stopniu</em> oraz <em>w jakim tempie</em> zachodziły te przemiany.</p>
+<p>Analiza miała również odpowiedzieć na pytanie, czy materiały kartograficzne pochodzące z różnych okresów i wykonane według różnych standardów można sprowadzić do wspólnego modelu przestrzennego, który pozwala na ich porównanie.</p>
+<div class="project-callout"><p>Najważniejszym założeniem projektu było więc stworzenie możliwie jednolitej metody porównania źródeł, które pierwotnie nie były tworzone z myślą o takim zestawieniu.</p></div>
+<div class="project-grid">
+<div class="project-card"><strong>Główne kierunki zmian</strong><span>Identyfikacja najważniejszych przekształceń struktury użytkowania terenu.</span></div>
+<div class="project-card"><strong>Dynamika</strong><span>Określenie skali i tempa zmian poszczególnych klas.</span></div>
+<div class="project-card"><strong>Uwarunkowania</strong><span>Interpretacja zmian w kontekście rozwoju osadnictwa, gospodarki i środowiska.</span></div>
+<div class="project-card"><strong>Źródła historyczne</strong><span>Ocena przydatności dawnych opracowań topograficznych w analizach GIS.</span></div>
+</div>
+</section>
+
+<section class="project-section" id="obszar">
+<h2>2. Dlaczego gmina Czerwonak?</h2>
+<p>Czerwonak jest obszarem, na którym w stosunkowo niewielkiej przestrzeni spotykają się różne sposoby użytkowania terenu: rozległe kompleksy leśne, dolina Warty, tereny rolnicze, zabudowa mieszkaniowa oraz obszary przemysłowe i komunikacyjne.</p>
+<p>Jednocześnie gmina znajduje się bezpośrednio przy Poznaniu. Takie położenie sprawia, że jej współczesny krajobraz jest silnie związany z procesami rozwoju obszaru metropolitalnego. W pracy analizowano między innymi wpływ rozwoju osadnictwa, industrializacji, zmian gospodarczych i rozbudowy infrastruktury na stopniowe przekształcanie wcześniejszego krajobrazu rolniczego.</p>
+<p>Nie oznacza to jednak, że każdą zmianę widoczną na kolejnych mapach można bezpośrednio przypisać jednemu czynnikowi. Mapy pokazują przede wszystkim rezultat procesów, a ich interpretacja wymaga uwzględnienia zarówno historii obszaru, jak i charakteru samych źródeł.</p>
+</section>
+
+<section class="project-section" id="zrodla">
+<h2>3. Dziewięć dekad źródeł kartograficznych</h2>
+<p>Podstawą analizy było sześć opracowań kartograficznych reprezentujących kolejne etapy rozwoju zasobu topograficznego. Źródła różnią się skalą, szczegółowością, sposobem przedstawiania obiektów oraz zasadami generalizacji. Ich dobór wynikał z potrzeby zachowania możliwie ciągłej perspektywy czasowej oraz dostępności materiałów.</p>
+<div class="source-table-wrap"><table class="source-table">
+<thead><tr><th>Źródło</th><th>Okres / aktualność</th><th>Skala</th><th>Znaczenie w analizie</th></tr></thead>
+<tbody>
+<tr><td>Mapa topograficzna WIG</td><td>1933</td><td>1:25 000</td><td>Początek analizowanego okresu i punkt odniesienia dla zmian długookresowych.</td></tr>
+<tr><td>Mapa topograficzna „Powiatówka”</td><td>1962</td><td>1:25 000</td><td>Powojenny etap przemian użytkowania terenu.</td></tr>
+<tr><td>Mapa w układzie „1965”</td><td>opracowanie przygotowane w 1980 r.</td><td>1:25 000</td><td>Kolejny etap zmian, przedstawiony w innym standardzie kartograficznym.</td></tr>
+<tr><td>Mapa w układzie „1992”</td><td>opracowanie późniejsze</td><td>1:50 000</td><td>Okres silnych przemian osadniczych i gospodarczych.</td></tr>
+<tr><td>TBD</td><td>dane aktualne na 2013 r.</td><td>1:10 000</td><td>Przejście do znacznie bardziej szczegółowych danych cyfrowych.</td></tr>
+<tr><td>BDOT10k</td><td>dane aktualne na 2024 r.</td><td>1:10 000</td><td>Współczesny stan użytkowania terenu wykorzystany jako końcowy punkt analizy.</td></tr>
+</tbody></table></div>
+<div class="project-callout"><p>Ważne: daty występujące w analizie nie zawsze oznaczają rok wykonania obserwacji terenowej. W przypadku części opracowań odnoszą się do konkretnego produktu kartograficznego, jego układu lub aktualności danych. Dlatego „1965” i „1992” należy traktować przede wszystkim jako oznaczenia źródeł, a nie jako bezpośrednie obserwacje wykonane dokładnie w tych latach.</p></div>
+</section>
+
+<section class="project-section" id="metodyka">
+<h2>4. Od starej mapy do danych przestrzennych</h2>
+<p>Historyczna mapa nie jest jeszcze bezpośrednio porównywalnym zbiorem danych przestrzennych. Aby mogła zostać wykorzystana w analizie, trzeba najpierw odtworzyć jej położenie w obecnym układzie przestrzennym, a następnie zapisać informacje z mapy w postaci obiektów, które można mierzyć i analizować.</p>
+<h3>4.1. Georeferencja</h3>
+<p>Materiały historyczne zostały poddane georeferencji, czyli dopasowaniu do współczesnej przestrzeni geograficznej. Następnie zostały ograniczone do obecnych granic gminy Czerwonak. Dzięki temu możliwe było porównanie powierzchni klas użytkowania w obrębie tego samego obszaru odniesienia.</p>
+<h3>4.2. Wektoryzacja</h3>
+<p>Informacje z map zostały przekształcone do postaci wektorowej w środowisku GIS. Oznaczało to ręczne odwzorowanie granic jednostek użytkowania terenu i przypisanie ich do określonych kategorii.</p>
+<h3>4.3. Ujednolicenie klas</h3>
+<p>Poszczególne źródła nie posługiwały się identycznym sposobem klasyfikowania powierzchni. Dlatego konieczne było stworzenie wspólnego schematu, który umożliwił porównanie danych z różnych okresów. W procesie badawczym wykorzystano 12 klas bazowych, a w prezentacji wyników wyodrębniono najważniejsze kategorie, takie jak grunty orne, lasy, tereny zielone, zabudowa, zabudowa przemysłowa, wody, cmentarze i nieużytki.</p>
+<h3>4.4. Obliczenia</h3>
+<p>Dla kolejnych opracowań obliczono udział procentowy klas w powierzchni całkowitej, zmianę bezwzględną, zmianę względną oraz średnie tempo zmian. Dodatkowo obliczono wskaźnik dynamiki zmian użytkowania terenu LUCI dla dwóch skrajnych opracowań: WIG z 1933 r. i BDOT10k z 2024 r.</p>
+</section>
+
+<section class="project-section" id="wyniki">
+<h2>5. Co zmieniło się najbardziej?</h2>
+<p>Najbardziej charakterystyczną zmianą jest wyraźny spadek powierzchni gruntów ornych przy jednoczesnym wzroście powierzchni lasów, terenów zielonych, zabudowy i zabudowy przemysłowej. Zmiana ta nie była równomierna w całym analizowanym okresie. Poszczególne źródła pokazują różne fazy tego procesu.</p>
+<div class="number-grid">
+<div class="number-card"><span class="number">−3093,03 ha</span><span class="label">zmiana powierzchni gruntów ornych, 1933 → 2024</span></div>
+<div class="number-card"><span class="number">+1239,52 ha</span><span class="label">zmiana powierzchni lasów, 1933 → 2024</span></div>
+<div class="number-card"><span class="number">+648,87 ha</span><span class="label">zmiana powierzchni zabudowy, 1933 → 2024</span></div>
+<div class="number-card"><span class="number">+222,94 ha</span><span class="label">zmiana powierzchni zabudowy przemysłowej, 1933 → 2024</span></div>
+</div>
+<div class="luci-project"><div class="big">75%</div><div><h3>LUCI – skala zmian między 1933 a 2024 rokiem</h3><p>Wskaźnik LUCI osiągnął wartość 0,75. W ujęciu procentowym oznacza to około 75% powierzchni objętej zmianą klasy użytkowania pomiędzy dwoma skrajnymi opracowaniami. Nie oznacza to, że 75% gminy zostało zabudowane.</p></div></div>
+<h3>Największe zmiany poszczególnych klas</h3>
+<p>Powierzchnia lasów wzrosła z 2557,67 ha w 1933 r. do 3797,19 ha w 2024 r., czyli o 1239,52 ha (48,46%). Grunty orne zmniejszyły się z 4822,65 ha do 1729,62 ha, co oznacza spadek o 3093,03 ha (64,1%). Zabudowa wzrosła ze 105,96 ha do 754,83 ha, natomiast zabudowa przemysłowa z 6,15 ha do 229,09 ha.</p>
+<p>Wartości nie powinny być jednak odczytywane w oderwaniu od charakteru materiałów źródłowych. Różnice w skali, szczegółowości i generalizacji kartograficznej wpływają na sposób przedstawiania poszczególnych obiektów i mogą mieć wpływ na otrzymane powierzchnie.</p>
+</section>
+
+<section class="project-section">
+<h2>6. Jak wyglądała droga od 1933 do 2024 roku?</h2>
+<p>Kolejne opracowania pozwalają zobaczyć nie jeden skok, ale długotrwały proces przekształcania krajobrazu. Szczególnie wyraźne są dwa zjawiska: kurczenie się udziału gruntów ornych oraz stopniowy wzrost powierzchni terenów związanych z lasami, zielenią i zabudową.</p>
+<div class="timeline-list">
+<div class="timeline-item"><div class="timeline-year">1933</div><strong>Krajobraz o wyraźnie rolniczym charakterze</strong><p>Grunty orne zajmowały 4822,65 ha, czyli około 58% powierzchni analizowanego obszaru.</p></div>
+<div class="timeline-item"><div class="timeline-year">1962</div><strong>Wyraźne powojenne przekształcenia</strong><p>W porównaniu z 1933 r. zmniejszył się udział gruntów ornych, a wzrosły między innymi lasy i zabudowa.</p></div>
+<div class="timeline-item"><div class="timeline-year">układ „1965”</div><strong>Kolejny etap zmian w okresie powojennym</strong><p>Źródło pokazuje dalsze zmniejszanie powierzchni gruntów ornych i rozwój części pozostałych klas.</p></div>
+<div class="timeline-item"><div class="timeline-year">układ „1992”</div><strong>Silny wzrost terenów zabudowanych</strong><p>Między opracowaniami „1965” i „1992” odnotowano największy wzrost powierzchni terenów zabudowanych w całym badanym szeregu.</p></div>
+<div class="timeline-item"><div class="timeline-year">TBD – dane aktualne na 2013 r.</div><strong>Największe współczesne przekształcenia</strong><p>Pomiędzy opracowaniem „1992” a TBD nastąpił największy spadek powierzchni gruntów ornych oraz największy wzrost terenów zielonych spośród analizowanych przedziałów.</p></div>
+<div class="timeline-item"><div class="timeline-year">2024</div><strong>Współczesny krajobraz podmiejski</strong><p>Końcowy obraz analizy tworzą duże powierzchnie leśne, rozwinięta zabudowa oraz znacznie mniejszy niż w 1933 r. udział gruntów ornych.</p></div>
+</div>
+</section>
+
+<section class="project-section" id="interpretacja">
+<h2>7. Co stoi za tymi zmianami?</h2>
+<p>Sama mapa nie mówi, dlaczego konkretny fragment terenu zmienił swoje użytkowanie. Interpretacja wyników została dlatego zestawiona z historią rozwoju gminy i jej położeniem w bezpośrednim sąsiedztwie Poznania.</p>
+<h3>Rozwój osadnictwa</h3>
+<p>Powolne, a następnie coraz szybsze powiększanie obszarów mieszkaniowych i infrastruktury ograniczało udział gruntów ornych. Szczególnie istotne stały się inwestycje mieszkaniowe i rozwój zabudowy jednorodzinnej oraz wielorodzinnej.</p>
+<h3>Industrializacja</h3>
+<p>Zabudowa przemysłowa, która w 1933 r. zajmowała zaledwie 6,15 ha, w 2024 r. obejmowała 229,09 ha. W pracy wskazano między innymi rozwój elewatora zbożowego, zakładów przemysłowych, tartaku oraz późniejsze inwestycje przemysłowe jako elementy wpływające na zmianę krajobrazu.</p>
+<h3>Położenie przy Poznaniu</h3>
+<p>Bliskość dużego ośrodka miejskiego była jednym z istotnych kontekstów interpretacyjnych. Po 1989 r. procesy gospodarki wolnorynkowej i rozwój deweloperski przyczyniły się do dalszego przyspieszenia procesów zabudowy i suburbanizacji.</p>
+<h3>Infrastruktura</h3>
+<p>Rozwój zabudowy pociągał za sobą rozwój sieci drogowej. Analiza wskazała ponad dwukrotny wzrost długości dróg lokalnych względem okresu przedwojennego. Nowe osiedla i pojedyncze działki budowlane wymagały kolejnych dróg dojazdowych.</p>
+<h3>Środowisko i lasy</h3>
+<p>Gmina zachowała jednocześnie znaczący udział terenów leśnych, związany między innymi z obecnością Puszczy Zielonka. Wzrost powierzchni lasów jest jednym z najważniejszych wyników analizy, ale jego interpretacja nie powinna sprowadzać się do jednego procesu. Na obraz wyników wpływa zarówno rzeczywista zmiana użytkowania, jak i sposób klasyfikowania oraz przedstawiania terenów w poszczególnych źródłach.</p>
+</section>
+
+<section class="project-section limitations" id="ograniczenia">
+<h2>8. Nie wszystko, co widać na mapie, jest zmianą rzeczywistą</h2>
+<p>To jedna z najważniejszych części całego projektu. Porównanie map historycznych z nowoczesnymi bazami danych zawsze niesie ze sobą niepewność. Źródła nie powstawały według jednego standardu, nie mają identycznej dokładności i nie przedstawiają wszystkich obiektów z taką samą szczegółowością.</p>
+<h3>Różne skale i generalizacja</h3>
+<p>Materiały wykorzystane w badaniu mają skale od 1:50 000 do 1:10 000, a więc różną szczegółowość. Opracowania o mniejszej skali silniej generalizują obiekty i mogą pomijać drobne elementy krajobrazu.</p>
+<h3>Georeferencja</h3>
+<p>Niewielkie różnice w dopasowaniu historycznego rastra do współczesnej przestrzeni mogą wpływać na powierzchnie małych obiektów. Problem ten jest szczególnie widoczny w przypadku cmentarzy, nieużytków czy innych niewielkich klas.</p>
+<h3>Klasyfikacja</h3>
+<p>Nie wszystkie współczesne klasy użytkowania mają swoje bezpośrednie odpowiedniki na dawnych mapach. Przykładem są ogródki działkowe, które na potrzeby spójności analizy zostały przyporządkowane do terenów uprawnych. Była to decyzja metodologiczna, a nie twierdzenie, że oba sposoby użytkowania są identyczne.</p>
+<h3>Brak kompletnych materiałów pomocniczych</h3>
+<p>Ograniczeniem była również dostępność archiwalnych materiałów, w szczególności zdjęć lotniczych. Ich wykorzystanie mogłoby w wielu miejscach pomóc rozstrzygnąć, czy zmiana widoczna pomiędzy dwoma mapami była rzeczywistym przekształceniem, czy wynikała z różnic w sposobie kartowania.</p>
+<div class="project-callout"><p>Dlatego najważniejszy nie jest pojedynczy poligon czy pojedyncza wartość powierzchni, lecz powtarzalny wzorzec zmian widoczny w całym analizowanym okresie.</p></div>
+</section>
+
+<section class="project-section">
+<h2>9. Dlaczego mimo tych ograniczeń analiza ma sens?</h2>
+<p>Ograniczenia nie przekreślają wartości porównania. Przeciwnie — są częścią informacji, którą należy uwzględnić podczas interpretacji. Jeżeli ten sam kierunek zmian pojawia się w kolejnych źródłach, obejmuje duże powierzchnie i pozostaje widoczny mimo różnic metodologicznych pomiędzy mapami, staje się znacznie bardziej przekonującym sygnałem rzeczywistej przemiany krajobrazu.</p>
+<p>Właśnie dlatego projekt nie jest próbą stworzenia „idealnej” rekonstrukcji każdego metra kwadratowego gminy z 1933 roku. Jest próbą wykorzystania dostępnych źródeł w sposób możliwie spójny, jawny i powtarzalny, tak aby można było zobaczyć długookresowy kierunek przemian.</p>
+<p>Interaktywna mapa jest więc nie tylko ilustracją wyników. Jest uproszczonym interfejsem do danych przestrzennych powstałych w wyniku całego procesu badawczego.</p>
+</section>
+
+<section class="project-section" id="praca">
+<h2>10. Praca magisterska</h2>
+<p>Projekt internetowy powstał na podstawie pracy magisterskiej pt. <strong>„Kartograficzna analiza zmian struktury użytkowania terenu Gminy Czerwonak w latach 1933–2024”</strong>, napisanej na kierunku Geomatyka i kartografia na Wydziale Nauk Geograficznych i Geologicznych Uniwersytetu im. Adama Mickiewicza w Poznaniu pod kierunkiem prof. UAM dr. hab. Radzyma Ławniczaka.</p>
+<p>Praca zawiera pełniejszy opis źródeł, metodyki, klasyfikacji, obliczeń oraz interpretacji wyników. Niniejsza strona nie ma jej zastępować — ma raczej przełożyć najważniejsze elementy badania na formę dostępną dla osób zainteresowanych historią i przestrzenią gminy.</p>
+<div class="thesis-box">
+<div><strong>Praca magisterska – Repozytorium UAM</strong><span>Najbezpieczniej korzystać z publicznego rekordu pracy w repozytorium AMUR, zamiast umieszczać kopię pliku PDF bezpośrednio na tej stronie.</span></div>
+<a class="project-button" href="https://repozytorium.amu.edu.pl/" target="_blank" rel="noopener noreferrer">Repozytorium AMUR →</a>
+</div>
+<div class="project-footer-note">Dokładny odnośnik do rekordu pracy można podmienić tutaj, gdy zostanie ustalony publiczny adres rekordu w AMUR.</div>
+</section>
+
+<section class="project-section">
+<h2>11. Co dalej?</h2>
+<p>Analiza obejmuje okres 1933–2024, ale nie oznacza to, że na tym kończy się historia zmian. W przyszłości projekt może zostać rozszerzony o kolejne materiały archiwalne, zdjęcia lotnicze, dane planistyczne lub bardziej szczegółowe analizy przestrzenne.</p>
+<p>Szczególnie interesujące byłoby połączenie zmian użytkowania terenu z informacją o zmianach demograficznych, rozwojem sieci drogowej, lokalizacją inwestycji przemysłowych oraz zmianami form ochrony przyrody. Tego typu zestawienie pozwoliłoby przejść od pytania „jak zmieniła się gmina?” do bardziej szczegółowego pytania „dlaczego zmieniła się właśnie w ten sposób?”.</p>
+<div class="project-callout"><p>Ta strona jest więc nie tylko podsumowaniem zakończonego badania. Jest również punktem wyjścia do dalszego rozwijania projektu i dokładniejszego poznawania przestrzeni gminy Czerwonak.</p></div>
+</section>
+
+</main>
+
+<footer><strong>mgr inż. Marcin Kamieniczny</strong><br>Uniwersytet im. Adama Mickiewicza w Poznaniu</footer>
+</body>
+</html>

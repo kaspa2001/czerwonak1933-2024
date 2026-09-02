@@ -265,6 +265,65 @@ header p {
 }
 
 /* =========================
+   PRZYCISKI MAPY
+   ========================= */
+
+.map-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+#fullscreen-toggle {
+    border: 1px solid #cfd7d1;
+    border-radius: 6px;
+
+    background: white;
+    color: #24322a;
+
+    padding: 8px 12px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#fullscreen-toggle:hover {
+    background: #f3f5f3;
+}
+
+
+/* =========================
+   TRYB PEŁNOEKRANOWY
+   ========================= */
+
+#map:fullscreen {
+    width: 100vw;
+    height: 100vh;
+
+    min-height: 0;
+
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+#map:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+
+    min-height: 0;
+
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* =========================
    PODZIAŁKA
    ========================= */
 

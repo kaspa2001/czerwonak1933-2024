@@ -214,7 +214,6 @@ document.addEventListener(
     }
 );
 
-
 let isDragging = false;
 
 function moveSwipe(clientX) {

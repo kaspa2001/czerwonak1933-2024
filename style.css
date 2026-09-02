@@ -2013,3 +2013,63 @@ footer {
 
     overflow: hidden !important;
 }
+/* =========================
+   NAWIGACJA GŁÓWNA
+   ========================= */
+
+.site-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.site-nav a {
+    display: inline-block;
+    padding: 9px 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+
+    color: inherit;
+    text-decoration: none;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.site-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.65);
+    transform: translateY(-1px);
+}
+
+.site-nav a:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   NA TELEFONY
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .site-nav {
+        gap: 7px;
+        margin-top: 20px;
+    }
+
+    .site-nav a {
+        padding: 8px 13px;
+        font-size: 0.82rem;
+    }
+
+}

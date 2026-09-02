@@ -747,6 +747,12 @@ footer {
         gap: 7px;
         padding: 0 3px;
     }
+    
+    .chart-scale {
+    height: 300px;
+    padding-bottom: 22px;
+    font-size: 10px;
+    }
 
     .chart-column {
         max-width: none;

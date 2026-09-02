@@ -2171,3 +2171,15 @@ footer {
 
     text-align: right;
 }
+
+.chart-container {
+    display: block;
+}
+
+.chart-with-scale {
+    width: 100%;
+}
+
+.chart-legend {
+    width: 100%;
+}

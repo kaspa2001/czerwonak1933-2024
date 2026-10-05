@@ -99,12 +99,12 @@
 
             <div class="map-heading">
                 <div>
-                    <h2>Mapa interaktywna</h2>
+                    <h2>Interactive Map</h2>
 
-                    <p>
-                        Przesuń suwak, aby porównać stan gminy w 1933 i 2024 roku.
-                        W panelu „Warstwy” możesz włączać i wyłączać poszczególne klasy.
-                    </p>
+                        <p>
+                            Move the slider to compare the municipality in 1933 and 2024.
+                            In the “Layers” panel, you can turn individual classes on and off.
+                        </p>
                 </div>
             </div>
 
@@ -125,11 +125,11 @@
     <div class="map-buttons">
 
         <button id="fullscreen-toggle" type="button">
-            ⛶ Pełny ekran
+            ⛶ Fullscreen
         </button>
-
+        
         <button id="layer-toggle" type="button">
-            ☰ Warstwy
+            ☰ Layers
         </button>
 
     </div>
@@ -137,7 +137,7 @@
         <div id="layer-panel">
 
             <div class="layer-section-title">
-                Podkład
+                Basemap
             </div>
 
             <label>
@@ -146,71 +146,71 @@
             </label>
 
             <div class="layer-section-title">
-                Użytkowanie terenu
+                Land use
             </div>
 
             <label>
                 <input type="checkbox" data-layer="rolne" checked>
-                Tereny rolne
+                Agricultural land
             </label>
 
             <label>
                 <input type="checkbox" data-layer="las" checked>
-                Lasy
+                Forests
             </label>
 
             <label>
                 <input type="checkbox" data-layer="zielone" checked>
-                Tereny zielone
+                Green areas
             </label>
 
             <label>
                 <input type="checkbox" data-layer="nieuzytki" checked>
-                Nieużytki
+                Wasteland
             </label>
 
             <label>
                 <input type="checkbox" data-layer="jeziora" checked>
-                Jeziora
+                Lakes
             </label>
 
             <label>
                 <input type="checkbox" data-layer="zabudowa" checked>
-                Zabudowa
+                Built-up areas
             </label>
 
             <label>
                 <input type="checkbox" data-layer="przemysl" checked>
-                Przemysł
+                Industrial areas
             </label>
 
             <label>
                 <input type="checkbox" data-layer="cmentarze" checked>
-                Cmentarze
+                Cemeteries
             </label>
 
             <div class="layer-section-title">
-                Infrastruktura
+                Infrastructure
             </div>
 
             <label>
                 <input type="checkbox" data-layer="drogiLokalne" checked>
-                Drogi lokalne
+                Local roads
             </label>
 
             <label>
                 <input type="checkbox" data-layer="drogiGlowne" checked>
-                Drogi główne
+                Main roads
             </label>
 
             <label>
                 <input type="checkbox" data-layer="kolej" checked>
-                Kolej
+                Railway
             </label>
 
             <label>
                 <input type="checkbox" id="granica-toggle" checked>
-                Granica gminy
+                Municipal boundary
             </label>
 
             </div>
@@ -225,11 +225,11 @@
         <section class="results-section">
 
             <div class="results-heading">
-                <h2>91 lat zmian w kilku liczbach</h2>
+                <h2>91 Years of Change in Numbers</h2>
 
                 <p>
-                    Jak zmieniła się powierzchnia najważniejszych klas
-                    użytkowania terenu między 1933 a 2024 rokiem?
+                    How has the area of the main land-use classes
+                    changed between 1933 and 2024?
                 </p>
             </div>
 
@@ -238,7 +238,7 @@
                 <div class="result-card">
                     <div class="result-icon">🌾</div>
 
-                    <h3>Grunty orne</h3>
+                    <h3>Arable land</h3>
 
                     <div class="result-values">
                         <strong>4822,65 → 1729,62 ha</strong>
@@ -250,7 +250,7 @@
                     </div>
 
                     <p>
-                        Największy spadek spośród wszystkich analizowanych klas.
+                        The largest decrease among all analysed land-use classes.
                     </p>
                 </div>
 
@@ -258,7 +258,7 @@
                 <div class="result-card">
                     <div class="result-icon">🌲</div>
 
-                    <h3>Lasy</h3>
+                    <h3>Forests</h3>
 
                     <div class="result-values">
                         <strong>2557,67 → 3797,19 ha</strong>
@@ -270,7 +270,7 @@
                     </div>
 
                     <p>
-                        Powierzchnia lasów zwiększyła się o ponad 1200 hektarów.
+                        Forest area increased by more than 1,200 hectares.
                     </p>
                 </div>
 
@@ -278,7 +278,7 @@
                 <div class="result-card">
                     <div class="result-icon">🏠</div>
 
-                    <h3>Zabudowa</h3>
+                    <h3>Built-up areas</h3>
 
                     <div class="result-values">
                         <strong>105,96 → 754,83 ha</strong>
@@ -290,7 +290,7 @@
                     </div>
 
                     <p>
-                        Wyraźny wzrost związany z rozwojem terenów zabudowanych.
+                        A clear increase associated with the expansion of built-up areas.
                     </p>
                 </div>
 
@@ -298,7 +298,7 @@
                 <div class="result-card">
                     <div class="result-icon">🏭</div>
 
-                    <h3>Zabudowa przemysłowa</h3>
+                    <h3>Industrial areas</h3>
 
                     <div class="result-values">
                         <strong>6,15 → 229,09 ha</strong>
@@ -310,7 +310,7 @@
                     </div>
 
                     <p>
-                        Największy względny wzrost spośród analizowanych klas.
+                        The largest relative increase among the analysed classes.
                     </p>
                 </div>
 
@@ -323,12 +323,12 @@
             <div class="chart-section">
 
                 <div class="chart-heading">
-                    <h3>Jak zmieniała się struktura użytkowania terenu?</h3>
+                    <h3>How Has Land Use Structure Changed?</h3>
 
-                    <p>
-                        Udział poszczególnych klas w powierzchni gminy
-                        w kolejnych opracowaniach kartograficznych.
-                    </p>
+                        <p>
+                            The share of individual land-use classes in the municipality's area
+                            across successive cartographic studies.
+                        </p>
                 </div>
 
                <div class="chart-container">
@@ -437,42 +437,42 @@
 
                         <span>
                             <i class="legend-box rolne"></i>
-                            Grunty orne
+                            Arable land
                         </span>
 
                         <span>
                             <i class="legend-box las"></i>
-                            Lasy
+                            Forests
                         </span>
 
                         <span>
                             <i class="legend-box zielone"></i>
-                            Tereny zielone
+                            Green areas
                         </span>
 
                         <span>
                             <i class="legend-box zabudowa"></i>
-                            Zabudowa
+                            Built-up areas
                         </span>
 
                         <span>
                             <i class="legend-box przemysl"></i>
-                            Zabudowa przemysłowa
+                            Indrustrial areas
                         </span>
 
                         <span>
                             <i class="legend-box wody"></i>
-                            Wody
+                            Water bodies
                         </span>
 
                         <span>
                             <i class="legend-box cmentarze"></i>
-                            Cmentarze
+                            Cemeteries
                         </span>
 
                         <span>
                             <i class="legend-box nieuzytki"></i>
-                            Nieużytki
+                            Wasteland
                         </span>
 
                     </div>
@@ -480,9 +480,10 @@
                 </div>
 
                 <div class="chart-note">
-                    Wartości przedstawiają udział procentowy klas w powierzchni
-                    danego opracowania. Poszczególne źródła różnią się skalą,
-                    szczegółowością i sposobem przedstawiania obiektów.
+                    The values represent the percentage share of each class
+                    in the area covered by the respective study. The individual
+                    sources differ in scale, level of detail and the way objects
+                    are represented.
                 </div>
 
             </div>
@@ -499,11 +500,11 @@
 
                 <div class="luci-content">
 
-                    <h3>Powierzchnia gminy, która zmieniła sposób użytkowania</h3>
+                    <h3>Share of the Municipality Where Land Use Has Changed</h3>
 
                     <p>
-                        W latach 1933–2024 zmienił się sposób użytkowania
-                        około trzech czwartych powierzchni gminy Czerwonak.
+                        Between 1933 and 2024, land use changed across
+                        approximately three quarters of Czerwonak Municipality.
                     </p>
 
                     <div class="luci-period">
@@ -513,9 +514,8 @@
                     </div>
 
                     <p class="luci-method">
-                        Wartość wynika ze wskaźnika dynamiki zmian użytkowania
-                        terenu LUCI, obliczonego dla dwóch skrajnych opracowań
-                        kartograficznych.
+                        The value is based on the Land Use Change Intensity (LUCI)
+                        index, calculated for the two extreme cartographic studies.
                     </p>
 
                 </div>
@@ -529,12 +529,12 @@
             <div class="history-section">
 
                 <div class="history-heading">
-                    <h3>Jak zmieniała się gmina Czerwonak?</h3>
+                    <h3>How Has Czerwonak Municipality Changed?</h3>
 
-                    <p>
-                        Dziewięć dekad zmian użytkowania terenu można podzielić
-                        na kilka charakterystycznych etapów.
-                    </p>
+                        <p>
+                            Nine decades of land-use change can be divided
+                            into several distinctive stages.
+                        </p>
                 </div>
 
                 <div class="history-timeline">
@@ -551,18 +551,18 @@
 
                         <div class="history-card">
 
-                            <h4>Krajobraz rolniczy</h4>
+                            <h4>Agricultural Landscape</h4>
 
                             <p>
-                                Początek analizowanego okresu pokazuje gminę
-                                o zdecydowanie rolniczym charakterze.
-                                Grunty orne zajmowały około 58% powierzchni
-                                dzisiejszej gminy.
+                                The beginning of the analysed period shows a municipality
+                                with a distinctly agricultural character.
+                                Arable land accounted for approximately 58% of the area
+                                of today's municipality.
                             </p>
-
+                            
                             <div class="history-stat">
-                                Grunty orne
-                                <strong>4822,65 ha</strong>
+                                Arable land
+                                <strong>4822.65 ha</strong>
                             </div>
 
                         </div>
@@ -582,20 +582,19 @@
 
                         <div class="history-card">
 
-                            <h4>Początek wyraźnych przemian</h4>
+                            <h4>The Beginning of Major Changes</h4>
 
-                            <p>
-                                W porównaniu z 1933 rokiem zmniejsza się
-                                powierzchnia gruntów ornych, a zwiększa się
-                                powierzchnia lasów i terenów zabudowanych.
-                                Widoczny jest początek długotrwałej zmiany
-                                struktury użytkowania terenu.
-                            </p>
-
-                            <div class="history-stat">
-                                Lasy
-                                <strong>3099,53 ha</strong>
-                            </div>
+                                <p>
+                                    Compared with 1933, the area of arable land decreased,
+                                    while forest and built-up areas increased.
+                                    The beginning of a long-term transformation
+                                    in land-use structure becomes visible.
+                                </p>
+                                
+                                <div class="history-stat">
+                                    Forests
+                                    <strong>3099.53 ha</strong>
+                                </div>
 
                         </div>
 
@@ -607,26 +606,25 @@
                     <div class="history-item">
 
                         <div class="history-year">
-                            układ 1965
+                            1965 map sheet
                         </div>
 
                         <div class="history-dot"></div>
 
                         <div class="history-card">
 
-                            <h4>Rozwój przemysłu</h4>
+                            <h4>Industrial Development</h4>
 
                             <p>
-                                W kolejnych dekadach coraz wyraźniejszym
-                                elementem krajobrazu stają się tereny
-                                przemysłowe. W Czerwonaku rozwijały się
-                                zakłady związane między innymi z przemysłem,
-                                gospodarką rolną i transportem.
+                                In the following decades, industrial areas became
+                                an increasingly prominent element of the landscape.
+                                In Czerwonak, industrial facilities developed in
+                                connection with industry, agriculture and transport.
                             </p>
-
+                            
                             <div class="history-stat">
-                                Zabudowa przemysłowa
-                                <strong>101,67 ha</strong>
+                                Industrial areas
+                                <strong>101.67 ha</strong>
                             </div>
 
                         </div>
@@ -639,25 +637,24 @@
                     <div class="history-item">
 
                         <div class="history-year">
-                            układ 1992
+                            1992 map sheet
                         </div>
 
                         <div class="history-dot"></div>
 
                         <div class="history-card">
 
-                            <h4>Przyspieszenie urbanizacji</h4>
+                            <h4>Accelerating Urbanisation</h4>
 
                             <p>
-                                Między opracowaniami w układzie „1965”
-                                i „1992” odnotowano największy wzrost
-                                powierzchni terenów zabudowanych
-                                w całym analizowanym okresie.
+                                Between the 1965 and 1992 map sheets, the largest
+                                increase in built-up area during the entire analysed
+                                period was recorded.
                             </p>
-
+                            
                             <div class="history-stat">
-                                Zabudowa
-                                <strong>469,68 ha</strong>
+                                Built-up areas
+                                <strong>469.68 ha</strong>
                             </div>
 
                         </div>
@@ -677,19 +674,18 @@
 
                         <div class="history-card">
 
-                            <h4>Największe współczesne przekształcenia</h4>
+                            <h4>Major Recent Transformations</h4>
 
                             <p>
-                                Pomiędzy opracowaniem w układzie „1992”
-                                a TBD nastąpił największy spadek powierzchni
-                                gruntów ornych oraz największy wzrost
-                                terenów zielonych spośród analizowanych
-                                przedziałów.
+                                Between the 1992 map sheet and the 2013 study,
+                                the largest decrease in arable land and the largest
+                                increase in green areas among the analysed periods
+                                were recorded.
                             </p>
-
+                            
                             <div class="history-stat">
-                                Grunty orne
-                                <strong>2203,53 ha</strong>
+                                Arable land
+                                <strong>2203.53 ha</strong>
                             </div>
 
                         </div>
@@ -709,18 +705,18 @@
 
                         <div class="history-card">
 
-                            <h4>Gmina podmiejska</h4>
+                            <h4>Suburban Municipality</h4>
 
                             <p>
-                                Współczesny obraz gminy tworzy przede wszystkim
-                                rozległa powierzchnia lasów, rozwijająca się
-                                zabudowa oraz znacznie mniejszy niż dawniej
-                                udział gruntów ornych.
+                                The contemporary landscape of the municipality is
+                                characterised primarily by extensive forest areas,
+                                expanding built-up areas and a much smaller share
+                                of arable land than in the past.
                             </p>
-
+                            
                             <div class="history-stat">
-                                Lasy
-                                <strong>3797,19 ha</strong>
+                                Forests
+                                <strong>3797.19 ha</strong>
                             </div>
 
                         </div>
@@ -730,9 +726,9 @@
                 </div>
 
                 <div class="history-note">
-                    Oś czasu przedstawia najważniejsze etapy przemian
-                    zidentyfikowane na podstawie kolejnych opracowań
-                    kartograficznych wykorzystanych w analizie.
+                    The timeline presents the key stages of change
+                    identified based on the successive cartographic
+                    studies used in the analysis.
                 </div>
 
             </div>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gmina Czerwonak 1933–2024 – zmiany użytkowania terenu</title>
+
+    <meta name="description"
+        content="Interaktywna analiza zmian użytkowania terenu gminy Czerwonak w latach 1933–2024. Mapy historyczne, dane, statystyki i porównanie przemian krajobrazu.">
+
+    <meta name="author" content="mgr inż. Marcin Kamieniczny">
+
+    <link rel="canonical" href="https://czerwonak1933.pl/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:title" content="Gmina Czerwonak 1933–2024 – zmiany użytkowania terenu">
+    <meta property="og:description"
+        content="Interaktywne porównanie zmian użytkowania terenu gminy Czerwonak w latach 1933–2024.">
+    <meta property="og:url" content="https://czerwonak1933.pl/">
+    <meta property="og:image"
+          content="https://czerwonak1933.pl/og-image.jpg">
+    <meta property="og:image:width" content="1734">
+    <meta property="og:image:height" content="907">
+    <meta property="og:image:alt"
+          content="Gmina Czerwonak 1933–2024 – porównanie zmian użytkowania terenu">
+
+    <meta name="twitter:card" content="summary">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./style.css?v=2"
+    >
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Czerwonak 1933–2024",
+        "url": "https://czerwonak1933.pl/",
+        "description": "Interaktywna analiza zmian użytkowania terenu gminy Czerwonak w latach 1933–2024.",
+        "inLanguage": "pl-PL",
+        "author": {
+            "@type": "Person",
+            "name": "Marcin Kamieniczny"
+        }
+    }
+    </script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Jak zmieniła się gmina Czerwonak?</h1>
+
+        <p>
+            Interaktywne porównanie zmian użytkowania terenu
+            w latach 1933 i 2024.
+        </p>
+
+        <nav class="site-nav">
+
+    <a href="./index.html" class="nav-card active">
+        <span class="nav-card-title">Mapa i wyniki</span>
+        <span class="nav-card-description">
+            Interaktywna mapa, statystyki i dane
+        </span>
+    </a>
+
+    <a href="./o-projekcie.html" class="nav-card">
+        <span class="nav-card-title">O projekcie</span>
+        <span class="nav-card-description">
+            Metodologia, dane i źródła
+        </span>
+    </a>
+
+    <a href="./o-autorze.html" class="nav-card">
+        <span class="nav-card-title">O autorze</span>
+        <span class="nav-card-description">
+            Autor, badania i doświadczenie
+        </span>
+    </a>
+
+</nav>
+        
+    </header>
+
+    <main>
+        <section class="map-section">
+
+            <div class="map-heading">
+                <div>
+                    <h2>Mapa interaktywna</h2>
+
+                    <p>
+                        Przesuń suwak, aby porównać stan gminy w 1933 i 2024 roku.
+                        W panelu „Warstwy” możesz włączać i wyłączać poszczególne klasy.
+                    </p>
+                </div>
+            </div>
+
+<div class="year-header">
+    <span>1933</span>
+    <span>2024</span>
+</div>
+
+<div id="map">
+
+    <div id="swipe-handle">
+        <div class="swipe-line"></div>
+        <div class="swipe-button">↔</div>
+    </div>
+
+   <div id="layer-control">
+
+    <div class="map-buttons">
+
+        <button id="fullscreen-toggle" type="button">
+            ⛶ Pełny ekran
+        </button>
+
+        <button id="layer-toggle" type="button">
+            ☰ Warstwy
+        </button>
+
+    </div>
+
+        <div id="layer-panel">
+
+            <div class="layer-section-title">
+                Podkład
+            </div>
+
+            <label>
+                <input type="checkbox" id="osm-toggle">
+                OpenStreetMap
+            </label>
+
+            <div class="layer-section-title">
+                Użytkowanie terenu
+            </div>
+
+            <label>
+                <input type="checkbox" data-layer="rolne" checked>
+                Tereny rolne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="las" checked>
+                Lasy
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="zielone" checked>
+                Tereny zielone
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="nieuzytki" checked>
+                Nieużytki
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="jeziora" checked>
+                Jeziora
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="zabudowa" checked>
+                Zabudowa
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="przemysl" checked>
+                Przemysł
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="cmentarze" checked>
+                Cmentarze
+            </label>
+
+            <div class="layer-section-title">
+                Infrastruktura
+            </div>
+
+            <label>
+                <input type="checkbox" data-layer="drogiLokalne" checked>
+                Drogi lokalne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="drogiGlowne" checked>
+                Drogi główne
+            </label>
+
+            <label>
+                <input type="checkbox" data-layer="kolej" checked>
+                Kolej
+            </label>
+
+            <label>
+                <input type="checkbox" id="granica-toggle" checked>
+                Granica gminy
+            </label>
+
+            </div>
+        </div>
+    </div>
+            
+        </section>
+            <!-- =========================
+             NAJWAŻNIEJSZE ZMIANY
+             ========================= -->
+
+        <section class="results-section">
+
+            <div class="results-heading">
+                <h2>91 lat zmian w kilku liczbach</h2>
+
+                <p>
+                    Jak zmieniła się powierzchnia najważniejszych klas
+                    użytkowania terenu między 1933 a 2024 rokiem?
+                </p>
+            </div>
+
+            <div class="results-grid">
+
+                <div class="result-card">
+                    <div class="result-icon">🌾</div>
+
+                    <h3>Grunty orne</h3>
+
+                    <div class="result-values">
+                        <strong>4822,65 → 1729,62 ha</strong>
+                    </div>
+
+                    <div class="result-change decrease">
+                        −3093,03 ha
+                        <span>−64,1%</span>
+                    </div>
+
+                    <p>
+                        Największy spadek spośród wszystkich analizowanych klas.
+                    </p>
+                </div>
+
+
+                <div class="result-card">
+                    <div class="result-icon">🌲</div>
+
+                    <h3>Lasy</h3>
+
+                    <div class="result-values">
+                        <strong>2557,67 → 3797,19 ha</strong>
+                    </div>
+
+                    <div class="result-change increase">
+                        +1239,52 ha
+                        <span>+48,5%</span>
+                    </div>
+
+                    <p>
+                        Powierzchnia lasów zwiększyła się o ponad 1200 hektarów.
+                    </p>
+                </div>
+
+
+                <div class="result-card">
+                    <div class="result-icon">🏠</div>
+
+                    <h3>Zabudowa</h3>
+
+                    <div class="result-values">
+                        <strong>105,96 → 754,83 ha</strong>
+                    </div>
+
+                    <div class="result-change increase">
+                        +648,87 ha
+                        <span>+612,4%</span>
+                    </div>
+
+                    <p>
+                        Wyraźny wzrost związany z rozwojem terenów zabudowanych.
+                    </p>
+                </div>
+
+
+                <div class="result-card">
+                    <div class="result-icon">🏭</div>
+
+                    <h3>Zabudowa przemysłowa</h3>
+
+                    <div class="result-values">
+                        <strong>6,15 → 229,09 ha</strong>
+                    </div>
+
+                    <div class="result-change increase">
+                        +222,94 ha
+                        <span>+3625%</span>
+                    </div>
+
+                    <p>
+                        Największy względny wzrost spośród analizowanych klas.
+                    </p>
+                </div>
+
+            </div>
+
+                <!-- =========================
+                 WYKRES STRUKTURY UŻYTKOWANIA
+                 ========================= -->
+
+            <div class="chart-section">
+
+                <div class="chart-heading">
+                    <h3>Jak zmieniała się struktura użytkowania terenu?</h3>
+
+                    <p>
+                        Udział poszczególnych klas w powierzchni gminy
+                        w kolejnych opracowaniach kartograficznych.
+                    </p>
+                </div>
+
+               <div class="chart-container">
+
+                    <div class="chart-with-scale">
+                
+                        <div class="chart-scale">
+                            <span>100%</span>
+                            <span>75%</span>
+                            <span>50%</span>
+                            <span>25%</span>
+                            <span>0%</span>
+                        </div>
+                
+                        <div class="chart-bars">
+
+                        <!-- 1933 -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 58.66%;"></div>
+                                <div class="chart-segment las" style="height: 31.11%;"></div>
+                                <div class="chart-segment zielone" style="height: 8.13%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 1.29%;"></div>
+                                <div class="chart-segment przemysl" style="height: 0.07%;"></div>
+                                <div class="chart-segment wody" style="height: 0.93%;"></div>
+                                <div class="chart-segment cmentarze" style="height: 0.05%;"></div>
+                                <div class="chart-segment nieuzytki" style="height: 0.04%;"></div>
+                            </div>
+                            <span>1933</span>
+                        </div>
+
+                        <!-- 1962 -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 51.22%;"></div>
+                                <div class="chart-segment las" style="height: 37.51%;"></div>
+                                <div class="chart-segment zielone" style="height: 6.03%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 3.80%;"></div>
+                                <div class="chart-segment przemysl" style="height: 0.56%;"></div>
+                                <div class="chart-segment wody" style="height: 0.81%;"></div>
+                                <div class="chart-segment cmentarze" style="height: 0.07%;"></div>
+                            </div>
+                            <span>1962</span>
+                        </div>
+
+                        <!-- układ 1965 -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 44.10%;"></div>
+                                <div class="chart-segment las" style="height: 41.46%;"></div>
+                                <div class="chart-segment zielone" style="height: 8.50%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 3.44%;"></div>
+                                <div class="chart-segment przemysl" style="height: 1.23%;"></div>
+                                <div class="chart-segment wody" style="height: 1.01%;"></div>
+                                <div class="chart-segment nieuzytki" style="height: 0.28%;"></div>
+                            </div>
+                            <span>układ 1965</span>
+                        </div>
+
+                        <!-- układ 1992 -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 40.06%;"></div>
+                                <div class="chart-segment las" style="height: 42.36%;"></div>
+                                <div class="chart-segment zielone" style="height: 7.61%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 5.70%;"></div>
+                                <div class="chart-segment przemysl" style="height: 2.37%;"></div>
+                                <div class="chart-segment wody" style="height: 1.53%;"></div>
+                                <div class="chart-segment nieuzytki" style="height: 0.33%;"></div>
+                            </div>
+                            <span>układ 1992</span>
+                        </div>
+
+                        <!-- TBD -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 26.73%;"></div>
+                                <div class="chart-segment las" style="height: 45.84%;"></div>
+                                <div class="chart-segment zielone" style="height: 16.33%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 6.77%;"></div>
+                                <div class="chart-segment przemysl" style="height: 2.34%;"></div>
+                                <div class="chart-segment wody" style="height: 1.90%;"></div>
+                                <div class="chart-segment nieuzytki" style="height: 0.06%;"></div>
+                            </div>
+                            <span>TBD</span>
+                        </div>
+
+                        <!-- 2024 -->
+                        <div class="chart-column">
+                            <div class="chart-bar">
+                                <div class="chart-segment rolne" style="height: 20.97%;"></div>
+                                <div class="chart-segment las" style="height: 46.03%;"></div>
+                                <div class="chart-segment zielone" style="height: 19.08%;"></div>
+                                <div class="chart-segment zabudowa" style="height: 9.15%;"></div>
+                                <div class="chart-segment przemysl" style="height: 2.78%;"></div>
+                                <div class="chart-segment wody" style="height: 1.90%;"></div>
+                                <div class="chart-segment nieuzytki" style="height: 0.04%;"></div>
+                            </div>
+                            <span>2024</span>
+                        </div>
+
+                    </div>
+                    </div>
+
+                    <div class="chart-legend">
+
+                        <span>
+                            <i class="legend-box rolne"></i>
+                            Grunty orne
+                        </span>
+
+                        <span>
+                            <i class="legend-box las"></i>
+                            Lasy
+                        </span>
+
+                        <span>
+                            <i class="legend-box zielone"></i>
+                            Tereny zielone
+                        </span>
+
+                        <span>
+                            <i class="legend-box zabudowa"></i>
+                            Zabudowa
+                        </span>
+
+                        <span>
+                            <i class="legend-box przemysl"></i>
+                            Zabudowa przemysłowa
+                        </span>
+
+                        <span>
+                            <i class="legend-box wody"></i>
+                            Wody
+                        </span>
+
+                        <span>
+                            <i class="legend-box cmentarze"></i>
+                            Cmentarze
+                        </span>
+
+                        <span>
+                            <i class="legend-box nieuzytki"></i>
+                            Nieużytki
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="chart-note">
+                    Wartości przedstawiają udział procentowy klas w powierzchni
+                    danego opracowania. Poszczególne źródła różnią się skalą,
+                    szczegółowością i sposobem przedstawiania obiektów.
+                </div>
+
+            </div>
+
+                        <!-- =========================
+                 WSKAŹNIK LUCI
+                 ========================= -->
+
+            <div class="luci-highlight">
+
+                <div class="luci-number">
+                    75%
+                </div>
+
+                <div class="luci-content">
+
+                    <h3>Powierzchnia gminy, która zmieniła sposób użytkowania</h3>
+
+                    <p>
+                        W latach 1933–2024 zmienił się sposób użytkowania
+                        około trzech czwartych powierzchni gminy Czerwonak.
+                    </p>
+
+                    <div class="luci-period">
+                        <span>1933</span>
+                        <span class="luci-arrow">→</span>
+                        <span>2024</span>
+                    </div>
+
+                    <p class="luci-method">
+                        Wartość wynika ze wskaźnika dynamiki zmian użytkowania
+                        terenu LUCI, obliczonego dla dwóch skrajnych opracowań
+                        kartograficznych.
+                    </p>
+
+                </div>
+
+                       </div>
+
+            <!-- =========================
+                 HISTORIA ZMIAN
+                 ========================= -->
+
+            <div class="history-section">
+
+                <div class="history-heading">
+                    <h3>Jak zmieniała się gmina Czerwonak?</h3>
+
+                    <p>
+                        Dziewięć dekad zmian użytkowania terenu można podzielić
+                        na kilka charakterystycznych etapów.
+                    </p>
+                </div>
+
+                <div class="history-timeline">
+
+                    <!-- 1933 -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            1933
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Krajobraz rolniczy</h4>
+
+                            <p>
+                                Początek analizowanego okresu pokazuje gminę
+                                o zdecydowanie rolniczym charakterze.
+                                Grunty orne zajmowały około 58% powierzchni
+                                dzisiejszej gminy.
+                            </p>
+
+                            <div class="history-stat">
+                                Grunty orne
+                                <strong>4822,65 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 1962 -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            1962
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Początek wyraźnych przemian</h4>
+
+                            <p>
+                                W porównaniu z 1933 rokiem zmniejsza się
+                                powierzchnia gruntów ornych, a zwiększa się
+                                powierzchnia lasów i terenów zabudowanych.
+                                Widoczny jest początek długotrwałej zmiany
+                                struktury użytkowania terenu.
+                            </p>
+
+                            <div class="history-stat">
+                                Lasy
+                                <strong>3099,53 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 1965 -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            układ 1965
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Rozwój przemysłu</h4>
+
+                            <p>
+                                W kolejnych dekadach coraz wyraźniejszym
+                                elementem krajobrazu stają się tereny
+                                przemysłowe. W Czerwonaku rozwijały się
+                                zakłady związane między innymi z przemysłem,
+                                gospodarką rolną i transportem.
+                            </p>
+
+                            <div class="history-stat">
+                                Zabudowa przemysłowa
+                                <strong>101,67 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 1992 -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            układ 1992
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Przyspieszenie urbanizacji</h4>
+
+                            <p>
+                                Między opracowaniami w układzie „1965”
+                                i „1992” odnotowano największy wzrost
+                                powierzchni terenów zabudowanych
+                                w całym analizowanym okresie.
+                            </p>
+
+                            <div class="history-stat">
+                                Zabudowa
+                                <strong>469,68 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TBD -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            2013
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Największe współczesne przekształcenia</h4>
+
+                            <p>
+                                Pomiędzy opracowaniem w układzie „1992”
+                                a TBD nastąpił największy spadek powierzchni
+                                gruntów ornych oraz największy wzrost
+                                terenów zielonych spośród analizowanych
+                                przedziałów.
+                            </p>
+
+                            <div class="history-stat">
+                                Grunty orne
+                                <strong>2203,53 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- 2024 -->
+
+                    <div class="history-item">
+
+                        <div class="history-year">
+                            2024
+                        </div>
+
+                        <div class="history-dot"></div>
+
+                        <div class="history-card">
+
+                            <h4>Gmina podmiejska</h4>
+
+                            <p>
+                                Współczesny obraz gminy tworzy przede wszystkim
+                                rozległa powierzchnia lasów, rozwijająca się
+                                zabudowa oraz znacznie mniejszy niż dawniej
+                                udział gruntów ornych.
+                            </p>
+
+                            <div class="history-stat">
+                                Lasy
+                                <strong>3797,19 ha</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="history-note">
+                    Oś czasu przedstawia najważniejsze etapy przemian
+                    zidentyfikowane na podstawie kolejnych opracowań
+                    kartograficznych wykorzystanych w analizie.
+                </div>
+
+            </div>
+                        <!-- =========================
+                 BILANS 91 LAT ZMIAN
+                 ========================= -->
+
+            <div class="change-balance">
+
+                <div class="change-balance-heading">
+                    <h3>Bilans 91 lat zmian</h3>
+
+                    <p>
+                        Między 1933 a 2024 rokiem wyraźnie zmieniła się
+                        struktura użytkowania terenu gminy Czerwonak.
+                        Największe zmiany dotyczą gruntów ornych, lasów
+                        oraz terenów związanych z zabudową.
+                    </p>
+                </div>
+
+
+                <div class="change-balance-grid">
+
+                    <!-- SPADKI -->
+
+                    <div class="change-group decrease-group">
+
+                        <div class="change-group-title">
+                            <span class="change-symbol">↓</span>
+                            Spadek powierzchni
+                        </div>
+
+                        <div class="change-item">
+
+                            <div class="change-item-top">
+                                <strong>Grunty orne</strong>
+                                <span>4822,65 → 1729,62 ha</span>
+                            </div>
+
+                            <div class="change-bar">
+                                <div
+                                    class="change-bar-fill decrease"
+                                    style="width: 100%;">
+                                </div>
+                            </div>
+
+                            <div class="change-item-value decrease">
+                                −3093,03 ha
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- WZROSTY -->
+
+                    <div class="change-group increase-group">
+
+                        <div class="change-group-title">
+                            <span class="change-symbol">↑</span>
+                            Wzrost powierzchni
+                        </div>
+
+
+                        <div class="change-item">
+
+                            <div class="change-item-top">
+                                <strong>Lasy</strong>
+                                <span>2557,67 → 3797,19 ha</span>
+                            </div>
+
+                            <div class="change-bar">
+                                <div
+                                    class="change-bar-fill increase"
+                                    style="width: 40%;">
+                                </div>
+                            </div>
+
+                            <div class="change-item-value increase">
+                                +1239,52 ha
+                            </div>
+
+                        </div>
+
+
+                        <div class="change-item">
+
+                            <div class="change-item-top">
+                                <strong>Tereny zielone</strong>
+                                <span>668,13 → 1574,04 ha</span>
+                            </div>
+
+                            <div class="change-bar">
+                                <div
+                                    class="change-bar-fill increase"
+                                    style="width: 29%;">
+                                </div>
+                            </div>
+
+                            <div class="change-item-value increase">
+                                +905,91 ha
+                            </div>
+
+                        </div>
+
+
+                        <div class="change-item">
+
+                            <div class="change-item-top">
+                                <strong>Zabudowa</strong>
+                                <span>105,96 → 754,83 ha</span>
+                            </div>
+
+                            <div class="change-bar">
+                                <div
+                                    class="change-bar-fill increase"
+                                    style="width: 21%;">
+                                </div>
+                            </div>
+
+                            <div class="change-item-value increase">
+                                +648,87 ha
+                            </div>
+
+                        </div>
+
+
+                        <div class="change-item">
+
+                            <div class="change-item-top">
+                                <strong>Zabudowa przemysłowa</strong>
+                                <span>6,15 → 229,09 ha</span>
+                            </div>
+
+                            <div class="change-bar">
+                                <div
+                                    class="change-bar-fill increase"
+                                    style="width: 7%;">
+                                </div>
+                            </div>
+
+                            <div class="change-item-value increase">
+                                +222,94 ha
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="change-balance-note">
+
+                    <strong>Jak czytać ten bilans?</strong>
+
+                    <p>
+                        Wartości przedstawiają różnicę powierzchni poszczególnych
+                        klas pomiędzy opracowaniami z 1933 i 2024 roku.
+                        Nie oznaczają bezpośrednio, że określona powierzchnia
+                        jednej klasy została w całości przekształcona w inną.
+                    </p>
+
+                </div>
+
+            </div>
+            <p class="results-source">
+                Powierzchnie na podstawie analizy kartograficznej
+                dla lat 1933 i 2024.
+            </p>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <strong>mgr inż. Marcin Kamieniczny</strong>
+        <br>
+        Uniwersytet im. Adama Mickiewicza w Poznaniu
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>

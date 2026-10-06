@@ -152,113 +152,245 @@
 </section>
 
 <section class="project-section" id="zrodla">
-<h2>3. Dziewięć dekad źródeł kartograficznych</h2>
-<p>Podstawą analizy było sześć opracowań kartograficznych reprezentujących kolejne etapy rozwoju zasobu topograficznego. Źródła różnią się skalą, szczegółowością, sposobem przedstawiania obiektów oraz zasadami generalizacji. Ich dobór wynikał z potrzeby zachowania możliwie ciągłej perspektywy czasowej oraz dostępności materiałów.</p>
-<div class="source-table-wrap"><table class="source-table">
-<thead><tr><th>Źródło</th><th>Okres / aktualność</th><th>Skala</th><th>Znaczenie w analizie</th></tr></thead>
+<h2>3. Nine decades of cartographic sources</h2>
+
+<p>The analysis was based on six cartographic sources representing successive stages in the development of the topographic data archive. The sources differ in scale, level of detail, methods of depicting features, and principles of cartographic generalization. Their selection was driven by the need to maintain the most continuous possible time perspective while taking into account the availability of materials.</p>
+
+<div class="source-table-wrap">
+<table class="source-table">
+
+<thead>
+<tr>
+<th>Source</th>
+<th>Period / currency</th>
+<th>Scale</th>
+<th>Role in the analysis</th>
+</tr>
+</thead>
+
 <tbody>
-<tr><td>Mapa topograficzna WIG</td><td>1933</td><td>1:25 000</td><td>Początek analizowanego okresu i punkt odniesienia dla zmian długookresowych.</td></tr>
-<tr><td>Mapa topograficzna „Powiatówka”</td><td>1962</td><td>1:25 000</td><td>Powojenny etap przemian użytkowania terenu.</td></tr>
-<tr><td>Mapa w układzie „1965”</td><td>opracowanie przygotowane w 1980 r.</td><td>1:25 000</td><td>Kolejny etap zmian, przedstawiony w innym standardzie kartograficznym.</td></tr>
-<tr><td>Mapa w układzie „1992”</td><td>opracowanie późniejsze</td><td>1:50 000</td><td>Okres silnych przemian osadniczych i gospodarczych.</td></tr>
-<tr><td>TBD</td><td>dane aktualne na 2013 r.</td><td>1:10 000</td><td>Przejście do znacznie bardziej szczegółowych danych cyfrowych.</td></tr>
-<tr><td>BDOT10k</td><td>dane aktualne na 2024 r.</td><td>1:10 000</td><td>Współczesny stan użytkowania terenu wykorzystany jako końcowy punkt analizy.</td></tr>
-</tbody></table></div>
-<div class="project-callout"><p>Ważne: daty występujące w analizie nie zawsze oznaczają rok wykonania obserwacji terenowej. W przypadku części opracowań odnoszą się do konkretnego produktu kartograficznego, jego układu lub aktualności danych. Dlatego „1965” i „1992” należy traktować przede wszystkim jako oznaczenia źródeł, a nie jako bezpośrednie obserwacje wykonane dokładnie w tych latach.</p></div>
+
+<tr>
+<td>WIG topographic map</td>
+<td>1933</td>
+<td>1:25 000</td>
+<td>Beginning of the analysed period and reference point for long-term changes.</td>
+</tr>
+
+<tr>
+<td>“Powiatówka” topographic map</td>
+<td>1962</td>
+<td>1:25 000</td>
+<td>Post-war stage of land-use transformation.</td>
+</tr>
+
+<tr>
+<td>Map in the “1965” reference system</td>
+<td>compiled in 1980</td>
+<td>1:25 000</td>
+<td>Further stage of change, represented using a different cartographic standard.</td>
+</tr>
+
+<tr>
+<td>Map in the “1992” reference system</td>
+<td>later compilation</td>
+<td>1:50 000</td>
+<td>Period of significant settlement and economic transformations.</td>
+</tr>
+
+<tr>
+<td>TBD</td>
+<td>data current as of 2013</td>
+<td>1:10 000</td>
+<td>Transition to considerably more detailed digital data.</td>
+</tr>
+
+<tr>
+<td>BDOT10k</td>
+<td>data current as of 2024</td>
+<td>1:10 000</td>
+<td>Contemporary land-use situation used as the final point of the analysis.</td>
+</tr>
+
+</tbody>
+</table>
+</div>
+
+<div class="project-callout">
+<p><strong>Important:</strong> The dates used in the analysis do not always represent the year in which a field observation was carried out. For some sources, they refer to a specific cartographic product, its reference system, or the currency of the data. Therefore, “1965” and “1992” should primarily be treated as source identifiers rather than direct observations made precisely in those years.</p>
+</div>
+
 </section>
 
 <section class="project-section" id="metodyka">
-<h2>4. Od starej mapy do danych przestrzennych</h2>
-<p>Historyczna mapa nie jest jeszcze bezpośrednio porównywalnym zbiorem danych przestrzennych. Aby mogła zostać wykorzystana w analizie, trzeba najpierw odtworzyć jej położenie w obecnym układzie przestrzennym, a następnie zapisać informacje z mapy w postaci obiektów, które można mierzyć i analizować.</p>
-<h3>4.1. Georeferencja</h3>
-<p>Materiały historyczne zostały poddane georeferencji, czyli dopasowaniu do współczesnej przestrzeni geograficznej. Następnie zostały ograniczone do obecnych granic gminy Czerwonak. Dzięki temu możliwe było porównanie powierzchni klas użytkowania w obrębie tego samego obszaru odniesienia.</p>
-<h3>4.2. Wektoryzacja</h3>
-<p>Informacje z map zostały przekształcone do postaci wektorowej w środowisku GIS. Oznaczało to ręczne odwzorowanie granic jednostek użytkowania terenu i przypisanie ich do określonych kategorii.</p>
-<h3>4.3. Ujednolicenie klas</h3>
-<p>Poszczególne źródła nie posługiwały się identycznym sposobem klasyfikowania powierzchni. Dlatego konieczne było stworzenie wspólnego schematu, który umożliwił porównanie danych z różnych okresów. W procesie badawczym wykorzystano 12 klas bazowych, a w prezentacji wyników wyodrębniono najważniejsze kategorie, takie jak grunty orne, lasy, tereny zielone, zabudowa, zabudowa przemysłowa, wody, cmentarze i nieużytki.</p>
-<h3>4.4. Obliczenia</h3>
-<p>Dla kolejnych opracowań obliczono udział procentowy klas w powierzchni całkowitej, zmianę bezwzględną, zmianę względną oraz średnie tempo zmian. Dodatkowo obliczono wskaźnik dynamiki zmian użytkowania terenu LUCI dla dwóch skrajnych opracowań: WIG z 1933 r. i BDOT10k z 2024 r.</p>
+<h2>4. From an old map to spatial data</h2>
+
+<p>A historical map is not yet a directly comparable spatial dataset. To use it in the analysis, its position first has to be reconstructed within the current spatial reference framework, and the information shown on the map then needs to be converted into features that can be measured and analysed.</p>
+
+<h3>4.1. Georeferencing</h3>
+
+<p>The historical materials were georeferenced, meaning that they were aligned with contemporary geographic space. They were then clipped to the current boundaries of Czerwonak Municipality. This made it possible to compare the areas of land-use classes within the same reference area.</p>
+
+<h3>4.2. Vectorization</h3>
+
+<p>The information from the maps was converted into vector data in a GIS environment. This involved manually reproducing the boundaries of land-use units and assigning them to specific categories.</p>
+
+<h3>4.3. Standardization of classes</h3>
+
+<p>The individual sources did not use identical approaches to land-use classification. It was therefore necessary to create a common classification scheme that would allow data from different periods to be compared. The research process used 12 base classes, while the results presented here distinguish the most important categories, such as arable land, forests, green areas, built-up areas, industrial areas, water, cemeteries and wasteland.</p>
+
+<h3>4.4. Calculations</h3>
+
+<p>For each source, the percentage share of individual classes in the total area, absolute change, relative change and average rate of change were calculated. In addition, the Land Use Change Intensity (LUCI) index was calculated for the two extreme sources: the WIG map from 1933 and BDOT10k data from 2024.</p>
+
 </section>
 
 <section class="project-section" id="wyniki">
-<h2>5. Co zmieniło się najbardziej?</h2>
-<p>Najbardziej charakterystyczną zmianą jest wyraźny spadek powierzchni gruntów ornych przy jednoczesnym wzroście powierzchni lasów, terenów zielonych, zabudowy i zabudowy przemysłowej. Zmiana ta nie była równomierna w całym analizowanym okresie. Poszczególne źródła pokazują różne fazy tego procesu.</p>
+<h2>5. What changed the most?</h2>
+
+<p>The most characteristic change is a clear decline in the area of arable land, accompanied by an increase in forests, green areas, built-up areas and industrial areas. This change was not uniform throughout the analysed period. The individual sources show different stages of this process.</p>
+
 <div class="number-grid">
-<div class="number-card"><span class="number">−3093,03 ha</span><span class="label">zmiana powierzchni gruntów ornych, 1933 → 2024</span></div>
-<div class="number-card"><span class="number">+1239,52 ha</span><span class="label">zmiana powierzchni lasów, 1933 → 2024</span></div>
-<div class="number-card"><span class="number">+648,87 ha</span><span class="label">zmiana powierzchni zabudowy, 1933 → 2024</span></div>
-<div class="number-card"><span class="number">+222,94 ha</span><span class="label">zmiana powierzchni zabudowy przemysłowej, 1933 → 2024</span></div>
+
+<div class="number-card">
+<span class="number">−3093.03 ha</span>
+<span class="label">change in arable land area, 1933 → 2024</span>
 </div>
-<div class="luci-project"><div class="big">75%</div><div><h3>LUCI – skala zmian między 1933 a 2024 rokiem</h3><p>Wskaźnik LUCI osiągnął wartość 0,75. W ujęciu procentowym oznacza to około 75% powierzchni objętej zmianą klasy użytkowania pomiędzy dwoma skrajnymi opracowaniami. Nie oznacza to, że 75% gminy zostało zabudowane.</p></div></div>
-<h3>Największe zmiany poszczególnych klas</h3>
-<p>Powierzchnia lasów wzrosła z 2557,67 ha w 1933 r. do 3797,19 ha w 2024 r., czyli o 1239,52 ha (48,46%). Grunty orne zmniejszyły się z 4822,65 ha do 1729,62 ha, co oznacza spadek o 3093,03 ha (64,1%). Zabudowa wzrosła ze 105,96 ha do 754,83 ha, natomiast zabudowa przemysłowa z 6,15 ha do 229,09 ha.</p>
-<p>Wartości nie powinny być jednak odczytywane w oderwaniu od charakteru materiałów źródłowych. Różnice w skali, szczegółowości i generalizacji kartograficznej wpływają na sposób przedstawiania poszczególnych obiektów i mogą mieć wpływ na otrzymane powierzchnie.</p>
+
+<div class="number-card">
+<span class="number">+1239.52 ha</span>
+<span class="label">change in forest area, 1933 → 2024</span>
+</div>
+
+<div class="number-card">
+<span class="number">+648.87 ha</span>
+<span class="label">change in built-up area, 1933 → 2024</span>
+</div>
+
+<div class="number-card">
+<span class="number">+222.94 ha</span>
+<span class="label">change in industrial area, 1933 → 2024</span>
+</div>
+
+</div>
+
+<div class="luci-project">
+
+<div class="big">75%</div>
+
+<div>
+<h3>LUCI – scale of change between 1933 and 2024</h3>
+<p>The LUCI index reached a value of 0.75. In percentage terms, this corresponds to approximately 75% of the area experiencing a change in land-use class between the two extreme sources. This does not mean that 75% of the municipality became built-up.</p>
+</div>
+
+</div>
+
+<h3>Largest changes in individual classes</h3>
+
+<p>Forest area increased from 2557.67 ha in 1933 to 3797.19 ha in 2024, an increase of 1239.52 ha (48.46%). Arable land decreased from 4822.65 ha to 1729.62 ha, representing a decline of 3093.03 ha (64.1%). Built-up area increased from 105.96 ha to 754.83 ha, while industrial area increased from 6.15 ha to 229.09 ha.</p>
+<p>However, these values should not be interpreted independently of the characteristics of the source materials. Differences in scale, level of detail and cartographic generalization affect how individual features are represented and may influence the resulting area measurements.</p>
 </section>
 
 <section class="project-section">
-<h2>6. Jak wyglądała droga od 1933 do 2024 roku?</h2>
-<p>Kolejne opracowania pozwalają zobaczyć nie jeden skok, ale długotrwały proces przekształcania krajobrazu. Szczególnie wyraźne są dwa zjawiska: kurczenie się udziału gruntów ornych oraz stopniowy wzrost powierzchni terenów związanych z lasami, zielenią i zabudową.</p>
+<h2>6. How did the landscape change between 1933 and 2024?</h2>
+<p>The successive sources reveal not a single transformation, but a long-term process of landscape change. Two phenomena are particularly clear: the declining share of arable land and the gradual increase in areas associated with forests, green spaces and built-up development.</p>
 <div class="timeline-list">
-<div class="timeline-item"><div class="timeline-year">1933</div><strong>Krajobraz o wyraźnie rolniczym charakterze</strong><p>Grunty orne zajmowały 4822,65 ha, czyli około 58% powierzchni analizowanego obszaru.</p></div>
-<div class="timeline-item"><div class="timeline-year">1962</div><strong>Wyraźne powojenne przekształcenia</strong><p>W porównaniu z 1933 r. zmniejszył się udział gruntów ornych, a wzrosły między innymi lasy i zabudowa.</p></div>
-<div class="timeline-item"><div class="timeline-year">układ „1965”</div><strong>Kolejny etap zmian w okresie powojennym</strong><p>Źródło pokazuje dalsze zmniejszanie powierzchni gruntów ornych i rozwój części pozostałych klas.</p></div>
-<div class="timeline-item"><div class="timeline-year">układ „1992”</div><strong>Silny wzrost terenów zabudowanych</strong><p>Między opracowaniami „1965” i „1992” odnotowano największy wzrost powierzchni terenów zabudowanych w całym badanym szeregu.</p></div>
-<div class="timeline-item"><div class="timeline-year">TBD – dane aktualne na 2013 r.</div><strong>Największe współczesne przekształcenia</strong><p>Pomiędzy opracowaniem „1992” a TBD nastąpił największy spadek powierzchni gruntów ornych oraz największy wzrost terenów zielonych spośród analizowanych przedziałów.</p></div>
-<div class="timeline-item"><div class="timeline-year">2024</div><strong>Współczesny krajobraz podmiejski</strong><p>Końcowy obraz analizy tworzą duże powierzchnie leśne, rozwinięta zabudowa oraz znacznie mniejszy niż w 1933 r. udział gruntów ornych.</p></div>
+
+<div class="timeline-item">
+<div class="timeline-year">1933</div>
+<strong>A distinctly agricultural landscape</strong>
+<p>Arable land covered 4822.65 ha, representing approximately 58% of the analysed area.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">1962</div>
+<strong>Clear post-war transformations</strong>
+<p>Compared with 1933, the share of arable land decreased, while forests and built-up areas, among other classes, increased.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">“1965” reference system</div>
+<strong>Further changes during the post-war period</strong>
+<p>The source shows a further reduction in arable land and the development of several other land-use classes.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">“1992” reference system</div>
+<strong>Strong growth of built-up areas</strong>
+<p>Between the “1965” and “1992” sources, the largest increase in built-up area in the entire analysed series was recorded.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">TBD – data current as of 2013</div>
+<strong>Major contemporary transformations</strong>
+<p>Between the “1992” source and TBD, the largest decrease in arable land and the largest increase in green areas among the analysed intervals were recorded.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-year">2024</div>
+<strong>A contemporary suburban landscape</strong>
+<p>The final picture is characterised by extensive forest areas, developed built-up areas and a substantially smaller share of arable land than in 1933.</p>
+</div>
+
 </div>
 </section>
 
-<section class="project-section" id="interpretacja">
-<h2>7. Co stoi za tymi zmianami?</h2>
-<p>Sama mapa nie mówi, dlaczego konkretny fragment terenu zmienił swoje użytkowanie. Interpretacja wyników została dlatego zestawiona z historią rozwoju gminy i jej położeniem w bezpośrednim sąsiedztwie Poznania.</p>
-<h3>Rozwój osadnictwa</h3>
-<p>Powolne, a następnie coraz szybsze powiększanie obszarów mieszkaniowych i infrastruktury ograniczało udział gruntów ornych. Szczególnie istotne stały się inwestycje mieszkaniowe i rozwój zabudowy jednorodzinnej oraz wielorodzinnej.</p>
-<h3>Industrializacja</h3>
-<p>Zabudowa przemysłowa, która w 1933 r. zajmowała zaledwie 6,15 ha, w 2024 r. obejmowała 229,09 ha. W pracy wskazano między innymi rozwój elewatora zbożowego, zakładów przemysłowych, tartaku oraz późniejsze inwestycje przemysłowe jako elementy wpływające na zmianę krajobrazu.</p>
-<h3>Położenie przy Poznaniu</h3>
-<p>Bliskość dużego ośrodka miejskiego była jednym z istotnych kontekstów interpretacyjnych. Po 1989 r. procesy gospodarki wolnorynkowej i rozwój deweloperski przyczyniły się do dalszego przyspieszenia procesów zabudowy i suburbanizacji.</p>
-<h3>Infrastruktura</h3>
-<p>Rozwój zabudowy pociągał za sobą rozwój sieci drogowej. Analiza wskazała ponad dwukrotny wzrost długości dróg lokalnych względem okresu przedwojennego. Nowe osiedla i pojedyncze działki budowlane wymagały kolejnych dróg dojazdowych.</p>
-<h3>Środowisko i lasy</h3>
-<p>Gmina zachowała jednocześnie znaczący udział terenów leśnych, związany między innymi z obecnością Puszczy Zielonka. Wzrost powierzchni lasów jest jednym z najważniejszych wyników analizy, ale jego interpretacja nie powinna sprowadzać się do jednego procesu. Na obraz wyników wpływa zarówno rzeczywista zmiana użytkowania, jak i sposób klasyfikowania oraz przedstawiania terenów w poszczególnych źródłach.</p>
-</section>
-
-<section class="project-section limitations" id="ograniczenia">
-<h2>8. Nie wszystko, co widać na mapie, jest zmianą rzeczywistą</h2>
-<p>To jedna z najważniejszych części całego projektu. Porównanie map historycznych z nowoczesnymi bazami danych zawsze niesie ze sobą niepewność. Źródła nie powstawały według jednego standardu, nie mają identycznej dokładności i nie przedstawiają wszystkich obiektów z taką samą szczegółowością.</p>
-<h3>Różne skale i generalizacja</h3>
-<p>Materiały wykorzystane w badaniu mają skale od 1:50 000 do 1:10 000, a więc różną szczegółowość. Opracowania o mniejszej skali silniej generalizują obiekty i mogą pomijać drobne elementy krajobrazu.</p>
-<h3>Georeferencja</h3>
-<p>Niewielkie różnice w dopasowaniu historycznego rastra do współczesnej przestrzeni mogą wpływać na powierzchnie małych obiektów. Problem ten jest szczególnie widoczny w przypadku cmentarzy, nieużytków czy innych niewielkich klas.</p>
-<h3>Klasyfikacja</h3>
-<p>Nie wszystkie współczesne klasy użytkowania mają swoje bezpośrednie odpowiedniki na dawnych mapach. Przykładem są ogródki działkowe, które na potrzeby spójności analizy zostały przyporządkowane do terenów uprawnych. Była to decyzja metodologiczna, a nie twierdzenie, że oba sposoby użytkowania są identyczne.</p>
-<h3>Brak kompletnych materiałów pomocniczych</h3>
-<p>Ograniczeniem była również dostępność archiwalnych materiałów, w szczególności zdjęć lotniczych. Ich wykorzystanie mogłoby w wielu miejscach pomóc rozstrzygnąć, czy zmiana widoczna pomiędzy dwoma mapami była rzeczywistym przekształceniem, czy wynikała z różnic w sposobie kartowania.</p>
-<div class="project-callout"><p>Dlatego najważniejszy nie jest pojedynczy poligon czy pojedyncza wartość powierzchni, lecz powtarzalny wzorzec zmian widoczny w całym analizowanym okresie.</p></div>
+<section class="project-section">
+<h2>7. What is behind these changes?</h2>
+<p>The changes visible in the maps are the result of several processes that took place simultaneously over the course of several decades. They cannot be attributed to a single factor.</p>
+<h3>Expansion of settlement</h3>
+<p>The area of built-up land increased substantially between 1933 and 2024. This reflects the gradual expansion of settlement and the transformation of previously agricultural areas into residential and other developed land.</p>
+<h3>Industrialisation</h3>
+<p>Industrial areas also increased significantly. Although they still occupy a relatively small share of the municipality, their growth is one of the clearest relative changes recorded in the analysed data.</p>
+<h3>Location near Poznań</h3>
+<p>Czerwonak Municipality is located directly north of Poznań. Its proximity to a large urban centre has influenced settlement development, land-use changes and the gradual transformation of the surrounding landscape.</p>
+<h3>Infrastructure development</h3>
+<p>The development of transport and technical infrastructure has accompanied the growth of settlement and economic activity. Roads, railway infrastructure and other elements of the transport network form an important part of the contemporary spatial structure.</p>
+<h3>Forests and the environment</h3>
+<p>The increase in forest area is another important element of the long-term transformation. The changes visible in the maps reflect both changes in land cover and differences in the way individual source materials classified and represented wooded areas.</p>
 </section>
 
 <section class="project-section">
-<h2>9. Dlaczego mimo tych ograniczeń analiza ma sens?</h2>
-<p>Ograniczenia nie przekreślają wartości porównania. Przeciwnie — są częścią informacji, którą należy uwzględnić podczas interpretacji. Jeżeli ten sam kierunek zmian pojawia się w kolejnych źródłach, obejmuje duże powierzchnie i pozostaje widoczny mimo różnic metodologicznych pomiędzy mapami, staje się znacznie bardziej przekonującym sygnałem rzeczywistej przemiany krajobrazu.</p>
-<p>Właśnie dlatego projekt nie jest próbą stworzenia „idealnej” rekonstrukcji każdego metra kwadratowego gminy z 1933 roku. Jest próbą wykorzystania dostępnych źródeł w sposób możliwie spójny, jawny i powtarzalny, tak aby można było zobaczyć długookresowy kierunek przemian.</p>
-<p>Interaktywna mapa jest więc nie tylko ilustracją wyników. Jest uproszczonym interfejsem do danych przestrzennych powstałych w wyniku całego procesu badawczego.</p>
-</section>
-
-<section class="project-section" id="praca">
-<h2>10. Podstawa projektu</h2>
-<p>Projekt internetowy powstał na podstawie pracy magisterskiej pt. <strong>„Kartograficzna analiza zmian struktury użytkowania terenu Gminy Czerwonak w latach 1933–2024”</strong>, napisanej na kierunku Geomatyka i kartografia na Wydziale Nauk Geograficznych i Geologicznych Uniwersytetu im. Adama Mickiewicza w Poznaniu pod kierunkiem prof. UAM dr. hab. Radzyma Ławniczaka.</p>
-<p>Praca magisterska zawiera pełniejszy opis wykorzystanych źródeł, metodyki, klasyfikacji, obliczeń oraz interpretacji wyników. Niniejsza strona nie ma jej zastępować — ma przełożyć najważniejsze elementy badania na formę dostępną dla osób zainteresowanych historią i przestrzenią gminy Czerwonak.</p>
+<h2>8. Not everything visible on the map represents a real change</h2>
+<p>Historical land-use analysis always involves a certain degree of uncertainty. A difference between two maps does not necessarily mean that the landscape itself changed by exactly the same amount.</p>
+<h3>Scale and cartographic generalisation</h3>
+<p>The analysed sources were produced at different scales and with different levels of detail. Small features may therefore have been omitted, simplified or represented differently depending on the source.</p>
+<h3>Georeferencing</h3>
+<p>Historical maps had to be fitted to contemporary geographic space. Errors introduced during georeferencing may affect the position of individual boundaries and consequently influence calculated areas.</p>
+<h3>Classification</h3>
+<p>The source materials did not use identical land-use classification systems. Some categories had to be combined or interpreted in order to create a common classification scheme for the entire study period.</p>
+<h3>Limited availability of supporting materials</h3>
+<p>The analysis is based primarily on the available cartographic sources. A complete set of historical aerial photographs, cadastral materials and other auxiliary datasets was not available for every period. Such materials could provide additional information and help distinguish actual landscape changes from differences resulting from cartographic representation.</p>
 </section>
 
 <section class="project-section">
-<h2>11. Co dalej?</h2>
-<p>Analiza obejmuje okres 1933–2024, ale nie oznacza to, że na tym kończy się historia zmian. W przyszłości projekt może zostać rozszerzony o kolejne materiały archiwalne, zdjęcia lotnicze, dane planistyczne lub bardziej szczegółowe analizy przestrzenne.</p>
-<p>Szczególnie interesujące byłoby połączenie zmian użytkowania terenu z informacją o zmianach demograficznych, rozwojem sieci drogowej, lokalizacją inwestycji przemysłowych oraz zmianami form ochrony przyrody. Tego typu zestawienie pozwoliłoby przejść od pytania „jak zmieniła się gmina?” do bardziej szczegółowego pytania „dlaczego zmieniła się właśnie w ten sposób?”.</p>
-<div class="project-callout"><p>Ta strona jest więc nie tylko podsumowaniem zakończonego badania. Jest również punktem wyjścia do dalszego rozwijania projektu i dokładniejszego poznawania przestrzeni gminy Czerwonak.</p></div>
+<h2>9. Why is the analysis still useful despite these limitations?</h2>
+<p>The purpose of the analysis is not to reconstruct every historical land-use boundary with centimetre-level accuracy. Its main value lies in showing the long-term direction and scale of landscape transformation.</p>
+<p>The same classification framework was applied as consistently as possible to all analysed sources. This makes it possible to identify the dominant trends: the decline of arable land, the growth of forests and green areas, and the expansion of built-up and industrial areas.</p>
+<p>The results therefore provide a broad spatial and temporal picture of how Czerwonak Municipality has changed over more than nine decades. They can also serve as a starting point for more detailed analyses based on higher-resolution historical materials.</p>
+</section>
+
+<section class="project-section">
+<h2>10. Basis of the project</h2>
+<p>The project is based on the master's thesis:</p>
+<blockquote>
+    <strong>“Cartographic analysis of land-use changes in Czerwonak Municipality between 1933 and 2024”</strong>
+</blockquote>
+<p>The thesis developed the methodology used to compare historical and contemporary cartographic sources and analyse changes in the structure of land use within the municipality.</p>
+<p>The project website presents selected results of this research in an accessible, interactive form. The complete master's thesis is not publicly available for download, but its existence and academic status can be verified through the University of Adam Mickiewicz in Poznań.</p>
+</section>
+
+<section class="project-section">
+<h2>11. What next?</h2>
+<p>The analysis presented here can be extended in several directions. More detailed historical materials, aerial imagery and additional spatial datasets could help refine the reconstruction of land-use changes and distinguish actual landscape transformations from differences caused by cartographic generalisation.</p>
+<p>The project can also serve as a basis for further analysis of individual parts of the municipality, selected land-use classes or specific periods of particularly intensive change.</p>
+<p>The website itself may also be expanded with additional datasets, maps and visualisations as the project develops.</p>
 </section>
 
 </main>
 
-<footer><strong>mgr inż. Marcin Kamieniczny</strong><br>Uniwersytet im. Adama Mickiewicza w Poznaniu</footer>
-</body>
-</html>
+<footer>
+    <strong>Marcin Kamieniczny, MSc Eng.</strong>
+    <br>
+    Adam Mickiewicz University in Poznań
+</footer>

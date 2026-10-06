@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About the Author – Marcin Kamieniczny | Czerwonak 1933–2024</title>
+
+<meta name="description" content="Marcin Kamieniczny – geomatics specialist, cartographer and PhD candidate at Adam Mickiewicz University, working with photogrammetry, unmanned aerial vehicles, remote sensing, laser scanning and spatial data analysis.">
+<meta name="author" content="Marcin Kamieniczny, MSc Eng.">
+
+<link rel="canonical" href="https://czerwonak1933.pl/eng/o-autorze.html">
+
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="About the Author – Marcin Kamieniczny">
+<meta property="og:description" content="Author of the Czerwonak 1933–2024 project. Geomatics, cartography, photogrammetry, UAV and environmental remote sensing.">
+<meta property="og:url" content="https://czerwonak1933.pl/eng/o-autorze.html">
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+.author-page{width:min(1100px,100%);margin:0 auto;padding:0 20px 60px}
+.author-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.75fr);gap:34px;align-items:stretch;padding:54px 20px 42px}
+.author-kicker{margin-bottom:12px;color:#66736b;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.author-hero h1{margin:0 0 12px;color:#234b34;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.05}
+.author-subtitle{margin:0 0 18px;color:#55645b;font-size:1.15rem;line-height:1.6}
+.author-intro{margin:0;color:#435148;font-size:16px;line-height:1.75}
+.photo-placeholder{min-height:300px;border:1px dashed #cbd5ce;border-radius:14px;background:#f4f7f5;display:flex;align-items:center;justify-content:center;text-align:center;color:#78847d;padding:25px}
+.photo-placeholder img {width: 100%;height: 100%;object-fit: cover;border-radius: 10px;display: block;}
+.author-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 auto 36px}
+.author-nav a{display:inline-block;padding:8px 12px;border:1px solid #d8dfda;border-radius:999px;background:#fff;color:#365341;text-decoration:none;font-size:13px;font-weight:700}
+.author-nav a:hover{background:#f3f5f3}
+.author-section{margin-top:28px;padding:34px 38px;background:#fff;border:1px solid #d8dfda;border-radius:14px;box-shadow:0 4px 14px rgba(28,54,37,.07)}
+.author-section h2{margin:0 0 18px;color:#234b34;font-size:clamp(1.55rem,3vw,2.1rem);line-height:1.2}
+.author-section h3{margin:28px 0 10px;color:#365341;font-size:1.18rem}
+.author-section h3:first-child{margin-top:0}
+.author-section p{margin:0 0 16px;color:#435148;font-size:16px;line-height:1.75}
+.author-section p:last-child{margin-bottom:0}
+.author-section ul{margin:10px 0 0;padding-left:23px;color:#435148;line-height:1.7}
+.author-section li{margin-bottom:7px}
+.author-timeline{position:relative;margin-top:24px;padding-left:30px;border-left:2px solid #d8dfda}
+.author-timeline-item{position:relative;margin-bottom:28px}
+.author-timeline-item:last-child{margin-bottom:0}
+.author-timeline-item:before{content:"";position:absolute;left:-39px;top:4px;width:12px;height:12px;border-radius:50%;background:#365341;border:3px solid #f5f7f5}
+.author-year{margin-bottom:5px;color:#365341;font-size:13px;font-weight:800;letter-spacing:.04em}
+.author-timeline-item strong{display:block;margin-bottom:5px;color:#234b34}
+.interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.interest-item{padding:22px;border:1px solid #dfe5e1;border-radius:10px;background:#fafcfb}
+.interest-item strong{display:block;margin-bottom:7px;color:#234b34;font-size:1.05rem}
+.interest-item p{margin:0;color:#66736b;font-size:14px;line-height:1.55}
+.uav-details{margin-top:20px}
+.uav-details summary{cursor:pointer;padding:17px 19px;border:1px solid #d8dfda;border-radius:9px;background:#f7faf8;color:#365341;font-weight:700;list-style:none}
+.uav-details summary::-webkit-details-marker{display:none}
+.uav-details summary:after{content:"＋";float:right;font-size:18px}
+.uav-details[open] summary:after{content:"−"}
+.uav-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.uav-card{padding:16px 18px;border:1px solid #e0e6e2;border-radius:9px;background:#fff}
+.uav-card strong{display:block;margin-bottom:4px;color:#234b34}
+.uav-card span{color:#66736b;font-size:13px;line-height:1.5}
+.achievement{margin-top:20px;padding:22px 24px;border-left:4px solid #365341;background:#f3f6f3;border-radius:0 10px 10px 0}
+.achievement strong{display:block;margin-bottom:6px;color:#234b34}
+.achievement p{margin:0}
+.publication-box{margin-top:20px;padding:22px 24px;border:1px solid #d8dfda;border-radius:10px;background:#f7faf8}
+.publication-box strong{display:block;margin-bottom:8px;color:#234b34}
+.publication-box a{color:#365341;font-weight:700;text-decoration:none;word-break:break-word}
+.publication-box a:hover{text-decoration:underline}
+.profile-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:22px}
+.profile-link{display:block;padding:15px 17px;border:1px solid #d8dfda;border-radius:9px;background:#fff;color:#365341;text-decoration:none;font-size:14px;font-weight:700}
+.profile-link:hover{background:#f3f6f3}
+.project-callout{margin:24px 0;padding:22px 24px;border-left:4px solid #365341;background:#f3f6f3;border-radius:0 10px 10px 0}
+.project-callout p{margin:0}
+@media(max-width:760px){
+.author-page{padding:0 10px 40px}
+.author-hero{grid-template-columns:1fr;padding:34px 10px 28px}
+.photo-placeholder{min-height:220px}
+.author-section{padding:24px 20px;border-radius:11px}
+.author-section p{font-size:15px;line-height:1.68}
+.interest-grid,.uav-list,.profile-links{grid-template-columns:1fr}
+}
+</style>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"ProfilePage",
+ "name":"About the Author – Marcin Kamieniczny",
+"description":"Profile of the author of the Czerwonak 1933–2024 project.",
+"inLanguage":"en-GB",
+ "mainEntity":{
+   "@type":"Person",
+   "name":"Marcin Kamieniczny",
+   "jobTitle":"PhD Candidate",
+   "affiliation":{
+     "@type":"CollegeOrUniversity",
+     "name":"Adam Mickiewicz University in Poznań"
+   },
+   "sameAs":[
+     "https://www.researchgate.net/profile/Marcin-Kamieniczny",
+     "https://orcid.org/0009-0004-8057-5134",
+     "https://researchportal.amu.edu.pl/info/author/UAM8b265624723847a79dafcfa91e46486d",
+     "https://www.linkedin.com/in/marcin-kamieniczny-1544962ab/",
+     "https://github.com/kaspa2001"
+   ]
+ }
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>Czerwonak Municipality 1933–2024</h1>
+<p>Cartographic analysis of land-use changes</p>
+</header>
+
+<main class="author-page">
+
+<section class="author-hero">
+<div>
+<div class="author-kicker">About the Author</div>
+<h1>Marcin Kamieniczny, MSc Eng.</h1>
+<p class="author-subtitle">Geomatics · cartography · photogrammetry · UAV · remote sensing</p>
+<p class="author-intro">I work with the acquisition and analysis of spatial data, with a particular focus on photogrammetry, unmanned aerial vehicles, remote sensing and laser scanning. I am currently developing these interests as part of my doctoral studies at Adam Mickiewicz University in Poznań.</p>
+</div>
+<div class="photo-placeholder">
+    <img src="./image.jpg" alt="Marcin Kamieniczny, MSc Eng.">
+</div>
+</section>
+
+<nav class="author-nav" aria-label="Author page navigation">
+    <a href="./index.html">Map &amp; Results</a>
+    <a href="./o-projekcie.html">About the Project</a>
+    <a href="#droga">Academic Path</a>
+    <a href="#czerwonak">Czerwonak</a>
+    <a href="#publikacje">Publications</a>
+    <a href="#profile">Profiles</a>
+</nav>
+
+<section class="author-section" id="droga">
+<h2>1. Academic Path</h2>
+
+<p>My academic path has been connected with surveying, cartography and geomatics from the beginning. The successive stages of my studies have allowed me to move from the classical foundations of surveying and cartographic work towards modern methods of acquiring and analysing spatial data.</p>
+
+<div class="author-timeline">
+
+<div class="author-timeline-item">
+<div class="author-year">10/2020</div>
+<strong>Beginning of my academic path</strong>
+<p>Started undergraduate studies in Geodesy and Cartography at Adam Mickiewicz University in Poznań.</p>
+</div>
+
+<div class="author-timeline-item">
+<div class="author-year">02/2023</div>
+<strong>Geodesy and Cartography (BSc Eng.)</strong>
+<p>Completed engineering studies and began master's studies in Geomatics and Cartography.</p>
+</div>
+
+<div class="author-timeline-item">
+<div class="author-year">07/2025</div>
+<strong>Geomatics and Cartography (MSc Eng.)</strong>
+<p>Completed master's studies. My thesis, <em>“Cartographic analysis of land-use changes in Czerwonak Municipality between 1933 and 2024”</em>, received second place in the Faculty Competition for Diploma Theses at Adam Mickiewicz University.</p>
+</div>
+
+<div class="author-timeline-item">
+<div class="author-year">10/2025</div>
+<strong>Doctoral School of Natural Sciences at AMU</strong>
+<p>Started doctoral studies in the discipline of Earth and Environmental Sciences. I conduct my research within the Department of Environmental Remote Sensing and Soil Science.</p>
+</div>
+
+</div>
+</section>
+
+<section class="author-section" id="czerwonak">
+<h2>2. Why did I create the Czerwonak 1933–2024 project?</h2>
+
+<p>Czerwonak Municipality is not just a research area for me. It is the place where I live, which made the opportunity to trace the changes that have taken place here over almost a century particularly interesting to me.</p>
+
+<p>My master's thesis became the starting point for creating a project that makes its results available in a more accessible and interactive form. Above all, I wanted the data and maps I had prepared not to remain solely part of an academic thesis, but to be useful to local residents and anyone interested in the history and spatial development of the municipality.</p>
+
+<div class="project-callout">
+    <p>The interactive map is an extension of my research, but also an attempt to show that spatial data can be a way of telling local history.</p>
+</div>
+
+</section>
+
+<section class="author-section" id="publikacje">
+<h2>3. Publications and Achievements</h2>
+
+<p>My research interests have also resulted in publications related to photogrammetry and the quality of acquired data.</p>
+
+<div class="publication-box">
+    <strong>Scientific publication</strong>
+    <p>An article concerning the influence of GCP distribution on a photogrammetric model.</p>
+    <a href="https://doi.org/10.15576/GLL/208229" target="_blank" rel="noopener noreferrer">DOI: 10.15576/GLL/208229 →</a>
+</div>
+
+<div class="achievement">
+    <strong>Second place – Faculty Competition for Diploma Theses at AMU</strong>
+    <p>Master's thesis: <em>“Cartographic analysis of land-use changes in Czerwonak Municipality between 1933 and 2024”</em>.</p>
+</div>
+
+</section>
+
+<section class="author-section" id="profile">
+<h2>4. Profiles and Professional Contact</h2>
+
+<p>Selected information about my academic and professional activities can also be found on external profiles.</p>
+
+<div class="profile-links">
+    <a class="profile-link" href="https://orcid.org/0009-0004-8057-5134" target="_blank" rel="noopener noreferrer">ORCID</a>
+    <a class="profile-link" href="https://researchportal.amu.edu.pl/info/author/UAM8b265624723847a79dafcfa91e46486d" target="_blank" rel="noopener noreferrer">AMU Research Portal</a>
+    <a class="profile-link" href="https://www.researchgate.net/profile/Marcin-Kamieniczny" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+    <a class="profile-link" href="https://www.linkedin.com/in/marcin-kamieniczny-1544962ab/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <a class="profile-link" href="https://github.com/kaspa2001" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+
+</section>
+
+<section class="author-section">
+<h2>5. Beyond the Project</h2>
+
+<p>The Czerwonak 1933–2024 project is one example of how I use spatial data to analyse changes taking place in the environment and landscape. My current interests, however, focus primarily on new data acquisition methods, UAV photogrammetry, remote sensing, and the reconstruction and analysis of 3D environments.</p>
+
+<p>For this purpose, I combine a classical cartographic approach with modern surveying and computational techniques. The combination of different data sources — from historical maps to contemporary imagery and 3D models — is one of the directions that interests me most in geomatics.</p>
+
+</section>
+
+</main>
+
+<footer>
+<strong>Marcin Kamieniczny, MSc Eng.</strong>
+<br>
+Adam Mickiewicz University in Poznań
+</footer>
+
+</body>
+</html>

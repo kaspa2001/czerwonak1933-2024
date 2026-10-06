@@ -2027,6 +2027,33 @@ footer {
    KAFELKI NAWIGACJI
    ========================= */
 
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.language-switcher a {
+    color: #365341;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-switcher a:hover {
+    text-decoration: underline;
+}
+
+.language-switcher a.active {
+    font-weight: 700;
+}
+
+.language-switcher span {
+    color: #a0aaa4;
+}
+
 .site-nav {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));

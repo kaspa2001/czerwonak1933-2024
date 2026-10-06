@@ -2028,11 +2028,14 @@ footer {
    ========================= */
 
 .language-switcher {
+    width: min(1400px, 100%);
+    margin: 0 auto 18px;
+    padding: 0 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 8px;
-    margin-bottom: 18px;
+    box-sizing: border-box;
     font-size: 13px;
 }
 
